@@ -1,0 +1,21 @@
+{
+  "name": "boutique",
+  "version": "0.0.1",
+  "author": {
+    "name": "Huayun Liu",
+    "email": "yxfanxiao@gmail.com"
+  },
+  "description": "A boutique shop.",
+  "scripts": {
+    "test": "to be added."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yxfanxiao/boutique.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yxfanxiao/boutique/issues"
+  },
+  "homepage": "https://github.com/yxfanxiao/boutique#readme"
+}
