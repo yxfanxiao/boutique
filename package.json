@@ -11,11 +11,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yxfanxiao/boutique.git"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/yxfanxiao/boutique/issues"
-  },
-  "homepage": "https://github.com/yxfanxiao/boutique#readme"
+    "url": "https://git.coding.net/yxfanxiao/boutique.git"
+  }
 }
