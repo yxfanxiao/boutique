@@ -12,5 +12,26 @@
   "repository": {
     "type": "git",
     "url": "https://git.coding.net/yxfanxiao/boutique.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^5.8.34",
+    "babel-core": "^5.8.34",
+    "babel-loader": "^5.4.0",
+    "css-loader": "^0.23.1",
+    "express": "^4.13.3",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "less": "^2.5.3",
+    "less-loader": "^2.2.2",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "react-redux": "^4.0.6",
+    "redux": "^3.0.5",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.11"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.4"
   }
 }
