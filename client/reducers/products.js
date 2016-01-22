@@ -5,7 +5,9 @@ import { RECEIVE_PRODUCTS } from "../actions";
 function products(state = [], action) {
     switch (action.type) {
         case RECEIVE_PRODUCTS:
-            return action.products;
+            return [
+                ...action.products
+            ]
         default:
             return state;
     }

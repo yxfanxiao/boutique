@@ -4,20 +4,23 @@
         "title": "iPhone 6s Plus",
         "price": "￥6888",
         "desc": "肾重之选",
-        "inventory": 5 
+        "inventory": 5,
+        "url": "/server/public/assets/images/apple/iphone.png"
     },
     {
         "id": 2,
         "title": "iPad Pro",
         "price": "￥5888",
         "desc": "爱派德",
-        "inventory": 3 
+        "inventory": 3,
+        "url": "/server/public/assets/images/apple/ipad.png"
     },
     {
         "id": 3,
         "title": "MacBook Air",
         "price": "￥10208",
-        "desc": "如果能重来, 我要选Mac...",
-        "inventory": 10 
+        "desc": "麦克布克",
+        "inventory": 10,
+        "url": "/server/public/assets/images/apple/macbook.png" 
     }
 ]

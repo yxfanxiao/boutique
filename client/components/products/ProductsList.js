@@ -11,7 +11,7 @@ export default class ProductsList extends Component {
                         return (
                             <ProductItem product={product} key={product.id} />       
                         );
-                    }
+                    })
                 }
             </ul>
         );

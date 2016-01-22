@@ -1,9 +1,5 @@
-import "style";
+import "./style";
 
-import ProductsList "./ProductList";
-import ProductItem from "./ProductItem";
+import ProductsList from "./ProductsList";
 
-export default {
-    ProductsList,
-    ProductItem
-}
+export default ProductsList;

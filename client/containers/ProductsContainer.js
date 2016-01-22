@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from "react";
 import { connect } from "react-redux";
-import ProductList from "../components/products/ProductList";
+import { ProductsList } from "../components";
 
 class ProductsContainer extends Component {
     render() {
@@ -8,15 +8,7 @@ class ProductsContainer extends Component {
         return (
             <div className="products-container">
                 <h3>Products List</h3>
-                <ul>
-                    {
-                        products.map((product) => {
-                            return (
-                                <ProductList product={product} />
-                            )
-                        })
-                    }
-                </ul>
+                <ProductsList products={products} />
             </div>
         );
     }

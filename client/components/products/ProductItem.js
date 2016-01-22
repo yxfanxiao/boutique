@@ -5,8 +5,17 @@ export default class ProductItem extends Component {
         const { product } = this.props;
         return (
             <li className="product-item">
-                <p>{product.title}</p>
-                <p>{product.price}</p>
+                <div className="product-item-img">
+                    <img
+                        src={product.url}
+                        alt={product.title}
+                    />
+                </div>
+                <div className="product-introduction">
+                    <a href="#">{product.title}</a>
+                    <p>{product.price}</p>
+                    <p>{product.desc}</p>
+                </div>
             </li>
         );
     }
