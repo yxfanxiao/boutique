@@ -3,13 +3,16 @@ const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const fs = require("fs");
 
-// const devMode = process.env.NODE_ENV !== "production";
+const devMode = process.env.NODE_ENV !== "production";
+const entryApp = devMode 
+    ? ["webpack-hot-middleware/client", "./index"]
+    : ["./index"];
 
 module.exports = {
     // the base directory (absolute path!) for resolving the entry option
     context: path.join(__dirname, "./client"),
     entry: {
-        app: "./index",
+        app: entryApp,
         // extract the largest modules for cache
         vendor: [
             "react", "react-dom", 
@@ -33,7 +36,7 @@ module.exports = {
     },
     // will generate map file
     // could delete it when build?
-    devtool: "source-map",
+    devtool: devMode ? "source-map" : "",
     resolve: {
         extensions: ["", ".js", ".jsx", ".less"]
     },
@@ -46,6 +49,9 @@ module.exports = {
         ]
     },
     plugins: [
+        new webpack.optimize.OccurenceOrderPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoErrorsPlugin(),
         // use without import, a bad habit, not use
         new webpack.ProvidePlugin({
             // React: "react"
@@ -55,15 +61,17 @@ module.exports = {
             name: "vendor",
             minChunks: Infinity
         }),
-        // to hash..
-        // 生成 HTML 时引用 stats.json 的数据
-        // function() {
-        //     this.plugin("done", stats => {
-        //         fs.writeFileSync(
-        //             path.join(__dirname, "stats.json"),
-        //             JSON.stringify(stats.toJson())
-        //         );
-        //     })
-        // }
+        // to hash
+        function() {
+            this.plugin("done", stats => {
+                fs.writeFileSync(
+                    path.join(__dirname, "config/hash.json"),
+                    JSON.stringify({
+                        hash: stats.hash,
+                        time: new Date().toString()
+                    })
+                );
+            })
+        }
     ]
 }
