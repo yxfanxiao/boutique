@@ -1,3 +1,5 @@
 /node_modules/
 
-/server/public/assets/images
+/server/public/assets/
+
+/config/hash.json
