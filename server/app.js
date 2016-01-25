@@ -6,7 +6,14 @@ import webpackConfig from "../webpack.config";
 import router from "./router";
 import path from "path";
 import favicon from "serve-favicon";
-import hash from "../config/hash";
+import config from "../config";
+import mongoose from "mongoose";
+import "./models";
+import bodyParser from "body-parser";
+import cookieParser from "cookie-parser";
+import session from "express-session";
+import MongoStore from "connect-mongo";
+MongoStore(session);
 
 const app = express();
 
@@ -15,6 +22,12 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "jade");
 
 app.use(favicon(path.join(__dirname, "public" , "assets" , "images" , "icon.ico")));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser(config.cookieSecret));
+// app.use(session({
+//     secret: config.sessionSecret
+// }))
 
 // develpoment or production environment
 app.set("dev", process.env.NODE_ENV !== "production");
@@ -33,8 +46,7 @@ if (app.get("dev")) {
     app.use(webpackHotMiddleware(compiler));
 } else {
     // production
-    // assetsPath += hash.hash;
-    // app.use(assetsPath, express.static(__dirname)+ "/public/"));
+    app.set("hash", config.hash);
 }
 
 // Routers

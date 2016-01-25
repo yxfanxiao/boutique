@@ -23,7 +23,9 @@ module.exports = {
         // webpack will compile static assets here
         path: path.join(__dirname, "./server/public/assets/"),
         publicPath: "/assets/",
-        filename: "[name].bundle.js",
+        filename: devMode 
+            ? "[name].bundle.js"
+            : "[name].bundle-[hash].js",
         // chunkFilename: non-entry chunks
         chunkFilename: "[id].bundle.js"
     },
@@ -35,7 +37,7 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.jsx?$/, loader: "babel" },
+            { test: /\.jsx?$/, exclude: /node_modules/, loader: "babel" },
             { test: /\.less$/, loader: "style!css!less" },
             { test: /\.(png|jpg)$/, loader: "url?limit=8192" },
             { test: /\.json$/, loader: "json" }
