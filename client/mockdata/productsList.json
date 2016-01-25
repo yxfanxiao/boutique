@@ -5,7 +5,7 @@
         "price": "￥6888",
         "desc": "肾重之选",
         "inventory": 5,
-        "url": "/server/public/assets/images/apple/iphone.png"
+        "url": "/assets/images/apple/iphone.png"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "price": "￥5888",
         "desc": "爱派德",
         "inventory": 3,
-        "url": "/server/public/assets/images/apple/ipad.png"
+        "url": "/assets/images/apple/ipad.png"
     },
     {
         "id": 3,
@@ -21,6 +21,6 @@
         "price": "￥10208",
         "desc": "麦克布克",
         "inventory": 10,
-        "url": "/server/public/assets/images/apple/macbook.png" 
+        "url": "/assets/images/apple/macbook.png" 
     }
 ]
