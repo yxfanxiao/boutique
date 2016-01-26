@@ -9,7 +9,7 @@ export default class ProductsList extends Component {
                 {
                     products.map(product => {
                         return (
-                            <ProductItem product={product} key={product.id} />       
+                            <ProductItem product={product} key={product._id} />       
                         );
                     })
                 }

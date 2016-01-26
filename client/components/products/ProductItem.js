@@ -13,8 +13,9 @@ export default class ProductItem extends Component {
                 </div>
                 <div className="product-introduction">
                     <a href="#">{product.title}</a>
-                    <p>{product.price}</p>
-                    <p>{product.desc}</p>
+                    <p className="price">{product.price}</p>
+                    <hr />
+                    <p className="desc">{product.desc}</p>
                 </div>
             </li>
         );
