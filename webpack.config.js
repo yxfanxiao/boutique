@@ -16,6 +16,7 @@ module.exports = {
         vendor: [
             "react", "react-dom", 
             "redux", "react-redux", "redux-thunk", "redux-logger",
+            "isomorphic-fetch",
             "classnames"
         ]
     },
@@ -45,23 +46,32 @@ module.exports = {
     },
     plugins: devMode 
         ? [
-            new webpack.optimize.OccurenceOrderPlugin(),
-            new webpack.HotModuleReplacementPlugin(),
-            new webpack.NoErrorsPlugin(),
-            // extract common files
-            new webpack.optimize.CommonsChunkPlugin({
-                name: "vendor",
-                minChunks: Infinity
-            })
-        ]
-        : [
-            new webpack.optimize.UglifyJsPlugin({
-                compress: { warnings: false }
+            new webpack.ProvidePlugin({
+                fetch: "isomorphic-fetch",
+                classNames: "classnames"
             }),
             // extract common files
             new webpack.optimize.CommonsChunkPlugin({
                 name: "vendor",
                 minChunks: Infinity
+            }),
+            // hot module replace
+            new webpack.optimize.OccurenceOrderPlugin(),
+            new webpack.HotModuleReplacementPlugin(),
+            new webpack.NoErrorsPlugin()
+        ]
+        : [
+            new webpack.ProvidePlugin({
+                fetch: "isomorphic-fetch",
+                classNames: "classnames"
+            }),
+            new webpack.optimize.CommonsChunkPlugin({
+                name: "vendor",
+                minChunks: Infinity
+            }),
+            // uglify
+            new webpack.optimize.UglifyJsPlugin({
+                compress: { warnings: false }
             }),
             // to hash
             function() {

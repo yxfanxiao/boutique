@@ -16,6 +16,9 @@
     "type": "git",
     "url": "https://git.coding.net/yxfanxiao/boutique.git"
   },
+  "engines": {
+    "node": "5.4.0"
+  },
   "license": "MIT",
   "dependencies": {
     "babel": "^5.8.34",

@@ -4,11 +4,14 @@ import { Carousel } from "../components";
 
 class CarouselContainer extends Component {
     render() {
-        const { products } = this.props;
+        const { carousel, dispatch } = this.props;
+        // console.log(dispatch);
+        console.log(this.props);
+        console.log(1111);
         return (
             <div className="carousel-container">
                 <h3>Carousel Container</h3>
-                <Carousel pics={pics} />
+                <Carousel carousel={carousel} dispatch={dispatch} />
             </div>
         );
     }
@@ -16,7 +19,8 @@ class CarouselContainer extends Component {
 
 function select(state) {
     return {
-        pics: state.products.map(product => product.url)
+        carousel: state.carousel,
+        dispatch: state.dispatch
     }
 }
 

@@ -1,10 +1,8 @@
-import { RECEIVE_PRODUCTS } from "../actions";
-
-// export function () {}
+import { PRODUCTS_RECEIVE_ALL } from "../constants";
 
 function products(state = [], action) {
     switch (action.type) {
-        case RECEIVE_PRODUCTS:
+        case PRODUCTS_RECEIVE_ALL:
             return [
                 ...action.products
             ]
