@@ -20,5 +20,10 @@ router.get("/v1/products", (req, res, next) => {
         res.send(products);
     })
 })
+router.get("/v1/carousel", (req, res, next) => {
+    api.findAllCarousel((err, carousel) => {
+        res.send(carousel);
+    })
+})
 
 export default router;

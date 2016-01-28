@@ -1,5 +1,5 @@
-const findAllProducts = require("./foo-getAllProducts");
+const productAPI = require("./foo-getAllProducts");
 
 export default {
-    findAllProducts
+    ...productAPI
 }

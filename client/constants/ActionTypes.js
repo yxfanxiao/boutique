@@ -5,7 +5,8 @@ const Actions = [
 
     // carousel
     "CAROUSEL_RECEIVE_PICS",
-    "CAROUSEL_NEXT_PICTURE"
+    "CAROUSEL_NEXT_PICTURE",
+    "CAROUSEL_INDICATOR_HANDLER"
 ]
 
 

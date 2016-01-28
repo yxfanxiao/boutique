@@ -3,6 +3,7 @@ import * as types from "../constants";
 function carousel(state = {
     currentIndex: 0,
     hasReceived: false,
+    interval: 1000,
     pics: []
 }, action) {
     switch (action.type) {
@@ -12,6 +13,10 @@ function carousel(state = {
                 hasReceived: true
             })
         case types.CAROUSEL_NEXT_PICTURE:
+            return Object.assign({}, state, {
+                currentIndex: action.currentIndex
+            })
+        case types.CAROUSEL_INDICATOR_HANDLER:
             return Object.assign({}, state, {
                 currentIndex: action.currentIndex
             })

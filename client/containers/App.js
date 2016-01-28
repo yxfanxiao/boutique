@@ -1,3 +1,5 @@
+import "./style";
+
 import React, { Component, PropTypes } from "react";
 import ProductsContainer from "./ProductsContainer";
 import CarouselContainer from "./CarouselContainer";

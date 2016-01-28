@@ -7,6 +7,13 @@ function getCarouselUrls(products) {
     }
 }
 
+export function indicatorHandler(selectIndex) {
+    return {
+        type: types.CAROUSEL_INDICATOR_HANDLER,
+        currentIndex: selectIndex
+    }
+}
+
 export function nextPicture(currentIndex) {
     return {
         type: types.CAROUSEL_NEXT_PICTURE,
@@ -14,24 +21,10 @@ export function nextPicture(currentIndex) {
     }
 }
 
-// function carouselInterval() {
-//     return (dispatch, getState) => {
-//         const { currentIndex } = getState().carousel;
-//         // console.log(currentIndex);
-//         // setInterval
-//         // (() => {
-//             // dispatch(nextPicture(currentIndex));
-//         // }, 1000)
-//     }
-// }
-
 export function fetchCarousel() {
     return (dispatch, getState) => {
-        fetch("/v1/products")
+        fetch("/v1/carousel")
             .then(res => res.json())
             .then(products => dispatch(getCarouselUrls(products)))
-            // .then(() => dispatch(carouselInterval(dispatch, getState)))
     }
 }
-
-// let carouselInterval = null;

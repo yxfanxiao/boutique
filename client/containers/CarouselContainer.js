@@ -5,9 +5,6 @@ import { Carousel } from "../components";
 class CarouselContainer extends Component {
     render() {
         const { carousel, dispatch } = this.props;
-        // console.log(dispatch);
-        console.log(this.props);
-        console.log(1111);
         return (
             <div className="carousel-container">
                 <h3>Carousel Container</h3>

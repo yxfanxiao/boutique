@@ -1,5 +1,10 @@
 require("babel-core/register");
-require("./crawl");
+
+// crawl index
+// require("./crawl");
 
 // try download pics
 // require("./download");
+
+// carousel
+require("./crawl-carousel");
