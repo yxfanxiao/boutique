@@ -3,7 +3,7 @@ import * as types from "../constants";
 function carousel(state = {
     currentIndex: 0,
     hasReceived: false,
-    interval: 1000,
+    interval: 5000,
     pics: []
 }, action) {
     switch (action.type) {

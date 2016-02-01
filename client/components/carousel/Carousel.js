@@ -25,33 +25,43 @@ export default class Carousel extends Component {
         }, interval)
     }
 
-    // when fetch successfully, start carousel interval
-    componentDidUpdate() {
-        // cancel carousel interval when scroll to below
-        window.addEventListener("scroll", (event) => {
-            const { scrollTop } = document.body;
-            if (scrollTop > 800) {
-                window.clearTimeout(this.carouselInterval);
-            } else {
-                this.setCarouselInterval();
-            }
-        })
-
-        const { hasReceived } = this.props.carousel;
-        if (hasReceived) {
-            this.setCarouselInterval();
-        }
-    }
-
     // jump to the selected pic through mouseover  
     handlerSelectPic(event) {
-        const selectIndex = +event.currentTarget.id.substr(-1);
+        // const selectIndex = +event.currentTarget.id.substr(-1);
+        const selectIndex = +event.currentTarget.id.match(/\d+/)[0];
+        if (selectIndex === null) {
+            throw new Error("Carousel class is wrong...");
+        }
         const { currentIndex } = this.props.carousel;
         if (selectIndex === currentIndex) {
             return;
         }
         const { dispatch } = this.props;
         dispatch(actions.indicatorHandler(selectIndex));
+    }
+
+    _carousel_onScroll(event) {
+        const { scrollTop } = document.body;
+        if (scrollTop > 800) {
+            window.clearTimeout(this.carouselInterval);
+        } else {
+            this.setCarouselInterval();
+        }       
+    }
+
+    // when fetch successfully, start carousel interval
+    componentDidUpdate() {
+        // stop carousel interval when scroll to below
+        window.addEventListener("scroll", this._carousel_onScroll.bind(this));
+        const { hasReceived } = this.props.carousel;
+        if (hasReceived) {
+            this.setCarouselInterval();
+        }
+    }
+
+    // when remove carousel component, remove the listener
+    componentWillUnmount() {
+        window.removeListener("scroll", this._carousel_onScroll.bind(this));
     }
 
     render() {
