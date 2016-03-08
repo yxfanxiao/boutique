@@ -7,4 +7,6 @@ require("babel-core/register");
 // require("./download");
 
 // carousel
-require("./crawl-carousel");
+// require("./crawl-carousel");
+
+require("./crawl-products")

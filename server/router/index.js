@@ -1,29 +1,19 @@
 import { Router } from "express";
 import app from "../app";
-import api from "../api";
 
 const router = Router();
 
-router.get("/", (req, res, next) => {
+router.get("/*", (req, res, next) => {
+    // use /* to match the SPA except api
+    if (req.params[0].substr(0, 3) === "v1/") {
+        next();
+        return;
+    }
     // public assets hash
     const hash = app.get("hash") ? "-" + app.get("hash") : "";
     res.render("index", {
         hash
     });
-})
-
-
-
-// api
-router.get("/v1/products", (req, res, next) => {
-    api.findAllProducts((err, products) => {
-        res.send(products);
-    })
-})
-router.get("/v1/carousel", (req, res, next) => {
-    api.findAllCarousel((err, carousel) => {
-        res.send(carousel);
-    })
 })
 
 export default router;

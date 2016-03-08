@@ -1,4 +1,4 @@
-const productAPI = require("./foo-getAllProducts");
+const productAPI = require("./foo");
 
 export default {
     ...productAPI

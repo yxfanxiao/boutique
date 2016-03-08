@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from "react";
 import { connect } from "react-redux";
-import { ProductsList } from "../components";
+import { ProductsList } from "../../components";
 
 class ProductsContainer extends Component {
     render() {

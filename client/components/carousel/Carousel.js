@@ -61,7 +61,7 @@ export default class Carousel extends Component {
 
     // when remove carousel component, remove the listener
     componentWillUnmount() {
-        window.removeListener("scroll", this._carousel_onScroll.bind(this));
+        window.removeEventListener("scroll", this._carousel_onScroll.bind(this));
     }
 
     render() {

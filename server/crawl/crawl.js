@@ -2,17 +2,6 @@ import request from "request";
 import cheerio from "cheerio";
 import { Product } from "../models";
 
-//  Foo:
-// const product = new Product();
-// product.title = "Foooooooo";
-// product.save((err, product) => {
-//     if (err) {
-//         console.error(err);
-//     }
-//     console.log(product);
-// });
-
-
 request("http://you.163.com/", (error, response, body) => {
     if (error || response.statusCode !== 200) {
         throw new Error("The lovely crawler crashed!");

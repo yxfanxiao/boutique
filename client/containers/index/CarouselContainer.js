@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from "react";
 import { connect } from "react-redux";
-import { Carousel } from "../components";
+import { Carousel } from "../../components";
 
 class CarouselContainer extends Component {
     render() {
