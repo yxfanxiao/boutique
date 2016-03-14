@@ -6,10 +6,17 @@ request("http://you.163.com/", (error, response, body) => {
         throw new Error("The lovely crawler crashed!")
     }
     const $ = cheerio.load(body)
+
     const nav = $(".j-nav-item").children("a")
-    const navs = []
+    const navs = [],
+        hrefs = []
     for (let i = 0; i < nav.length; i++) {
         navs.push($(nav[i]).attr("title"))
+        hrefs.push($(nav[i]).attr("href"))
     }
-    // navs.
+    // navs: Title => [ '居家', '厨房', '饮食' ]
+    // hrefs: /item/list?categoryId=1005000
+    // hrefs.forEach((href, i) => {
+          
+    // })
 })
