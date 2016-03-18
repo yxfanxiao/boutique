@@ -1,26 +1,31 @@
-import mongoose from "mongoose";
-import config from "../../config";
-// import User from "./User";
-import Product from "./Product";
+import mongoose from "mongoose"
+import config from "../../config"
+// import User from "./User"
+import Product from "./Product"
+import Carousel from "./Carousel"
+import Category from "./Category"
 
 
-mongoose.connect(config.db);
-const db = mongoose.connection;
 
-db.on("error", console.error.bind(console, "connection error: "));
+mongoose.connect(config.db)
+const db = mongoose.connection
+
+db.on("error", console.error.bind(console, "connection error: "))
 db.once("open", () => {
-    console.log("Connect to the database: boutique successfully. ");
+    console.log("Connect to the database: boutique successfully. ")
 })
 
 
 export default combineSchemas({
-    Product
-});
+    Product,
+    Carousel,
+    Category
+})
 
 
 function combineSchemas(schemas) {
     for (let key in schemas) {
-        schemas[key] = mongoose.model(key);
+        schemas[key] = mongoose.model(key)
     }
-    return schemas;
+    return schemas
 }

@@ -1,5 +1,6 @@
 import request from "request"
 import cheerio from "cheerio"
+import { Category } from "../models"
 
 request("http://you.163.com/", (error, response, body) => {
     if (error || response.statusCode !== 200) {
@@ -11,12 +12,14 @@ request("http://you.163.com/", (error, response, body) => {
     const navs = [],
         hrefs = []
     for (let i = 0; i < nav.length; i++) {
-        navs.push($(nav[i]).attr("title"))
-        hrefs.push($(nav[i]).attr("href"))
+        const categoryId = $(nav[i]).attr("href").match(/categoryId=\d+/)[0].substr(11)
+        const title =  $(nav[i]).attr("title")
+        const category = new Category()
+        Object.assign(category, {
+            categoryId,
+            isNav: true,
+            title
+        })
+        category.save()
     }
-    // navs: Title => [ '居家', '厨房', '饮食' ]
-    // hrefs: /item/list?categoryId=1005000
-    // hrefs.forEach((href, i) => {
-          
-    // })
 })

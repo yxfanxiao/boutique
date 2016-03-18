@@ -1,14 +1,18 @@
-import mongoose from "mongoose";
+import mongoose, { Schema } from "mongoose"
 
-const Schema = mongoose.Schema;
 const ProductSchema = new Schema({
     id: { type: Schema.ObjectId },
-    cate: { type: String },
-    title: { type: String },
-    price: { type: String },
+    spuId: { type: String },
+    categoryId: { type: String },       // 细分类目
+    src: { type: Array },               // 缩略图
+    detailHtml: { type: String },       // detail html
+    name: { type: String },
     desc: { type: String },
-    url: { type: String }
-});
+    attributes: { type: Array },        // [{ attrName, attrValue }]
+    skuList: { type: Object },
+    skuMap: { type: Object },
+    skuSpecList: { type: Array}
+})
 
-mongoose.model("Product", ProductSchema);
+mongoose.model("Product", ProductSchema)
 

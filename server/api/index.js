@@ -1,5 +1,5 @@
-const productAPI = require("./foo");
+const carousel = require("./carousel")
 
 export default {
-    ...productAPI
+    ...carousel
 }

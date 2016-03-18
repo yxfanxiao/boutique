@@ -1,20 +1,26 @@
-import request from "request";
-import cheerio from "cheerio";
-import { Product } from "../models";
-
-
+import request from "request"
+import cheerio from "cheerio"
+import { Carousel } from "../models"
 
 request("http://you.163.com/", (error, response, body) => {
     if (error || response.statusCode !== 200) {
-        throw new Error("The lovely crawler crashed!");
+        throw new Error("The lovely crawler crashed when crawling carousel!")
     }
-    const $ = cheerio.load(body);
-    const $pics = $(".js-img");
-    const pics = [];
-    $pics.each((i, pic) => {
-      const product = new Product();
-      product.url = $(pic).attr("src");
-      product.cate = "carousel";
-      product.save();
+    const $ = cheerio.load(body)
+    const $carousels = $(".f-imgCenterBanner")
+    const carousels = []
+    $carousels.each((i, c) => {
+        const href = $($(c).children(".wrap")).attr("href"),
+            id = href.match(/id=\d+/)
+        if (!id) {
+            return
+        }
+        const carousel = new Carousel()
+        Object.assign(carousel, {
+            src: $($(c).find(".js-img")).attr("src"),
+            spuId: id[0]
+        })
+        carousel.save()
     })
+    console.log("Crawl carousels successfully!")
 })

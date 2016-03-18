@@ -1,0 +1,861 @@
+{
+    "attrList": [
+        {
+            "attrName": "材质",
+            "attrValue": "100%棉"
+        },
+        {
+            "attrName": "件数",
+            "attrValue": "4件套"
+        },
+        {
+            "attrName": "执行标准",
+            "attrValue": "GB/T 22844-2009 GB18401-2010 A类"
+        },
+        {
+            "attrName": "产地",
+            "attrValue": "中国"
+        },
+        {
+            "attrName": "印花工艺",
+            "attrValue": "色织工艺"
+        }
+    ],
+    "categoryList": [
+        {
+            "bannerUrl": "http://yanxuan.nosdn.127.net/9d577dca06b08a69088e9f44f979fa86.png",
+            "frontDesc": "安睡，就这么简单",
+            "frontName": "安睡，就这么简单",
+            "iconUrl": "",
+            "id": 1008000,
+            "name": "床品",
+            "showIndex": 2,
+            "subCateList": [],
+            "superCategoryId": 0
+        },
+        {
+            "bannerUrl": "http://yanxuan.nosdn.127.net/65c0176e450d14ab597a9537e031d3c5.png",
+            "frontDesc": "棉的柔软，麻的舒爽，一张床，一场美梦",
+            "frontName": "亲肤四件套",
+            "iconUrl": "",
+            "id": 1008009,
+            "name": "四件套",
+            "showIndex": 2,
+            "subCateList": [],
+            "superCategoryId": 1008000
+        }
+    ],
+    "id": 1019003,
+    "itemDetail": {
+        "detailHtml": "<p><img src=\"http://yanxuan.nosdn.127.net/2aaaaf749444e18a758296024bcfce4f.jpg\" _src=\"http://yanxuan.nosdn.127.net/2aaaaf749444e18a758296024bcfce4f.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/9d18b3b9d8e2c3f4852188e73d21c14d.jpg\" _src=\"http://yanxuan.nosdn.127.net/9d18b3b9d8e2c3f4852188e73d21c14d.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/a27b37ce7d8eb1ad2af716c0779ec567.jpg\" _src=\"http://yanxuan.nosdn.127.net/a27b37ce7d8eb1ad2af716c0779ec567.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/3025389850bb47d9951512bc3b18c925.jpg\" _src=\"http://yanxuan.nosdn.127.net/3025389850bb47d9951512bc3b18c925.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/2dc7b9effa76fdf1d850305251bb0e17.jpg\" _src=\"http://yanxuan.nosdn.127.net/2dc7b9effa76fdf1d850305251bb0e17.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/a91756d74f87eb16ebb477c26988777e.jpg\" _src=\"http://yanxuan.nosdn.127.net/a91756d74f87eb16ebb477c26988777e.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/6d37b926e75ff9c65a13c0f8cfaa8dd0.jpg\" _src=\"http://yanxuan.nosdn.127.net/6d37b926e75ff9c65a13c0f8cfaa8dd0.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/0112d6d6b850559f7ac3ec938bdab266.jpg\" _src=\"http://yanxuan.nosdn.127.net/0112d6d6b850559f7ac3ec938bdab266.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/fc5f22e7502db324002dc14e47b7c07a.jpg\" _src=\"http://yanxuan.nosdn.127.net/fc5f22e7502db324002dc14e47b7c07a.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/d3683f9574cb8e887a2ea13433fc0d0c.jpg\" _src=\"http://yanxuan.nosdn.127.net/d3683f9574cb8e887a2ea13433fc0d0c.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/52742d3b0d2e2aa75d2e29a4efb3366d.jpg\" _src=\"http://yanxuan.nosdn.127.net/52742d3b0d2e2aa75d2e29a4efb3366d.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/b1014bce33ed62870bcef09b3be3dc74.jpg\" _src=\"http://yanxuan.nosdn.127.net/b1014bce33ed62870bcef09b3be3dc74.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/98a83ceff25a2fc58ab34e92dab260df.jpg\" _src=\"http://yanxuan.nosdn.127.net/98a83ceff25a2fc58ab34e92dab260df.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/22dc475746bba0c2ff4fe4bd9e19371a.jpg\" _src=\"http://yanxuan.nosdn.127.net/22dc475746bba0c2ff4fe4bd9e19371a.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/ac9f07b66a676866085a9d7344b86f6a.jpg\" _src=\"http://yanxuan.nosdn.127.net/ac9f07b66a676866085a9d7344b86f6a.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/1786c52d01315901094f6798554bf665.jpg\" _src=\"http://yanxuan.nosdn.127.net/1786c52d01315901094f6798554bf665.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/a8d9bbe22aea9c2fab06db75e5357bf1.jpg\" _src=\"http://yanxuan.nosdn.127.net/a8d9bbe22aea9c2fab06db75e5357bf1.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/ce96c138f6c8306fbe1343d3e70378c4.jpg\" _src=\"http://yanxuan.nosdn.127.net/ce96c138f6c8306fbe1343d3e70378c4.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/65061416ef1cbab17a45976efb4e7ef0.jpg\" _src=\"http://yanxuan.nosdn.127.net/65061416ef1cbab17a45976efb4e7ef0.jpg\" style=\"\"/><img src=\"http://yanxuan.nosdn.127.net/7b2cfcb733496def61f6ea786488ad91.jpg\" _src=\"http://yanxuan.nosdn.127.net/7b2cfcb733496def61f6ea786488ad91.jpg\" style=\"line-height: 22.8571px; white-space: normal;\"/></p><p><br/></p><p><img src=\"http://yanxuan.nosdn.127.net/abb68813f41d54b6e10f82e694201398.jpg\" _src=\"http://yanxuan.nosdn.127.net/abb68813f41d54b6e10f82e694201398.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/0d5f1e5dec0fa447055b10d7808eb24d.jpg\" _src=\"http://yanxuan.nosdn.127.net/0d5f1e5dec0fa447055b10d7808eb24d.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/981706d40ad43757fe0c20d0f34de234.jpg\" _src=\"http://yanxuan.nosdn.127.net/981706d40ad43757fe0c20d0f34de234.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/61ddeff0e650cf50f8ff30a97b1fc4fe.jpg\" _src=\"http://yanxuan.nosdn.127.net/61ddeff0e650cf50f8ff30a97b1fc4fe.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/7cabbf0904b1bcec7df2eeaea0d5cf53.jpg\" _src=\"http://yanxuan.nosdn.127.net/7cabbf0904b1bcec7df2eeaea0d5cf53.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/c22062859116db45e1954e9dc9e2fd5d.jpg\" _src=\"http://yanxuan.nosdn.127.net/c22062859116db45e1954e9dc9e2fd5d.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/c8cf118eeebb24e4413c1f3b76250860.jpg\" _src=\"http://yanxuan.nosdn.127.net/c8cf118eeebb24e4413c1f3b76250860.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/7370a36c6be5966ca55810eb9b1324f1.jpg\" _src=\"http://yanxuan.nosdn.127.net/7370a36c6be5966ca55810eb9b1324f1.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/7830314595ef6dca21fb70d67099a423.jpg\" _src=\"http://yanxuan.nosdn.127.net/7830314595ef6dca21fb70d67099a423.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/28b74119f58bfdf7184675410bd74293.jpg\" _src=\"http://yanxuan.nosdn.127.net/28b74119f58bfdf7184675410bd74293.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/eb5e5a84d093ad2f27efedce6ce6c9d1.jpg\" _src=\"http://yanxuan.nosdn.127.net/eb5e5a84d093ad2f27efedce6ce6c9d1.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/cbb3e19b2768ead60b1d58bbdef82c0e.jpg\" _src=\"http://yanxuan.nosdn.127.net/cbb3e19b2768ead60b1d58bbdef82c0e.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/4d45b8c2b801d76c28bd297a02acf3f9.jpg\" _src=\"http://yanxuan.nosdn.127.net/4d45b8c2b801d76c28bd297a02acf3f9.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/7cde9f8ebc7a84c80866b4e2dcb48cf0.jpg\" _src=\"http://yanxuan.nosdn.127.net/7cde9f8ebc7a84c80866b4e2dcb48cf0.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/6d8b26cf64d3b52423b604cadf1412a9.jpg\" _src=\"http://yanxuan.nosdn.127.net/6d8b26cf64d3b52423b604cadf1412a9.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/a08425f224139edf90a23595248e6a74.jpg\" _src=\"http://yanxuan.nosdn.127.net/a08425f224139edf90a23595248e6a74.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/dcfb1feda27993a3cc79063f9efc9b5f.jpg\" _src=\"http://yanxuan.nosdn.127.net/dcfb1feda27993a3cc79063f9efc9b5f.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/f022e0e6f7fc21123b9ba3fc9170271c.jpg\" _src=\"http://yanxuan.nosdn.127.net/f022e0e6f7fc21123b9ba3fc9170271c.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/39c7fa3186571d80aa705134dad2bcdc.jpg\" _src=\"http://yanxuan.nosdn.127.net/39c7fa3186571d80aa705134dad2bcdc.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/f4a4db46d7cf799fd68d6263f8b3ede0.jpg\" _src=\"http://yanxuan.nosdn.127.net/f4a4db46d7cf799fd68d6263f8b3ede0.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/1a616040ab68d0008b48559439cfdf1e.jpg\" _src=\"http://yanxuan.nosdn.127.net/1a616040ab68d0008b48559439cfdf1e.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/07ee49efa057ff51638c43b91eb45f20.jpg\" _src=\"http://yanxuan.nosdn.127.net/07ee49efa057ff51638c43b91eb45f20.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/ef95032b5451dc456cc93fd3ed5606a2.jpg\" _src=\"http://yanxuan.nosdn.127.net/ef95032b5451dc456cc93fd3ed5606a2.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/2192283d4fe532c0f00c544852e682fe.jpg\" _src=\"http://yanxuan.nosdn.127.net/2192283d4fe532c0f00c544852e682fe.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/b8d68b6bdc4205a04f83a3b2d9318861.jpg\" _src=\"http://yanxuan.nosdn.127.net/b8d68b6bdc4205a04f83a3b2d9318861.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/ebcb814b93d981d94a40877529a47aa6.jpg\" _src=\"http://yanxuan.nosdn.127.net/ebcb814b93d981d94a40877529a47aa6.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/90c9d068ec14e32d76d141977db5db88.jpg\" _src=\"http://yanxuan.nosdn.127.net/90c9d068ec14e32d76d141977db5db88.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/bd1d31e428cba684446e760bf1eaaa8b.jpg\" _src=\"http://yanxuan.nosdn.127.net/bd1d31e428cba684446e760bf1eaaa8b.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/403912c230aebe9d654d11da61254049.jpg\" _src=\"http://yanxuan.nosdn.127.net/403912c230aebe9d654d11da61254049.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/f0328912eeed65aff4eeb9dfa2e366c9.jpg\" _src=\"http://yanxuan.nosdn.127.net/f0328912eeed65aff4eeb9dfa2e366c9.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/d10e035e6b75e2ae61299fa9eb1a9c39.jpg\" _src=\"http://yanxuan.nosdn.127.net/d10e035e6b75e2ae61299fa9eb1a9c39.jpg\" style=\"\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/691f3b20915bff417938432160dfd876.jpg\" _src=\"http://yanxuan.nosdn.127.net/691f3b20915bff417938432160dfd876.jpg\"/></p><p><img src=\"http://yanxuan.nosdn.127.net/994228ac2ac42a9413dd8700e4549212.jpg\" _src=\"http://yanxuan.nosdn.127.net/994228ac2ac42a9413dd8700e4549212.jpg\" style=\"\"/></p><p><br/></p>",
+        "picUrl1": "http://yanxuan.nosdn.127.net/8446f94c86276f575fb3df5338ceb4fa.jpg",
+        "picUrl2": "http://yanxuan.nosdn.127.net/0965cf87ea906cea0f20753cf08d63cf.jpg",
+        "picUrl3": "http://yanxuan.nosdn.127.net/5c2f6a7f3a7aee6383c93cfbc7ef49ad.jpg",
+        "picUrl4": "http://yanxuan.nosdn.127.net/923f8a260aa6bcf1a1168d720e1a01ca.jpg",
+        "seoDesc": ""
+    },
+    "listPicUrl": "",
+    "name": "日式色织水洗棉四件套",
+    "primaryPicUrl": "http://yanxuan.nosdn.127.net/b3a7a12fb58b4a6968af3a1fd67254ed.jpg",
+    "primarySkuId": 1017005,
+    "rank": 1,
+    "retailPrice": 299,
+    "sellVolume": 1142,
+    "seoTitle": "",
+    "simpleDesc": "水洗做旧褶皱，亲肤柔软",
+    "skuList": [
+        {
+            "counterPrice": 0,
+            "id": 1017003,
+            "itemSkuSpecValueList": [
+                {
+                    "id": 1016003,
+                    "skuId": 1017003,
+                    "skuSpec": {
+                        "id": 1016003,
+                        "name": "尺寸",
+                        "skuSpecValueList": [],
+                        "type": 0
+                    },
+                    "skuSpecId": 1016003,
+                    "skuSpecValue": {
+                        "id": 1016003,
+                        "picUrl": "",
+                        "skuSpecId": 1016003,
+                        "value": "1米5"
+                    },
+                    "skuSpecValueId": 1016003
+                },
+                {
+                    "id": 1016004,
+                    "skuId": 1017003,
+                    "skuSpec": {
+                        "id": 1016004,
+                        "name": "颜色",
+                        "skuSpecValueList": [],
+                        "type": 1
+                    },
+                    "skuSpecId": 1016004,
+                    "skuSpecValue": {
+                        "id": 1016005,
+                        "picUrl": "http://yanxuan.nosdn.127.net/334fa00e4342e8c27d0abe83fdcd5eb2.jpg",
+                        "skuSpecId": 1016004,
+                        "value": "钴蓝"
+                    },
+                    "skuSpecValueId": 1016005
+                }
+            ],
+            "primarySku": false,
+            "retailPrice": 299,
+            "sellVolume": 121,
+            "valid": true
+        },
+        {
+            "counterPrice": 0,
+            "id": 1017004,
+            "itemSkuSpecValueList": [
+                {
+                    "id": 1016005,
+                    "skuId": 1017004,
+                    "skuSpec": {
+                        "id": 1016003,
+                        "name": "尺寸",
+                        "skuSpecValueList": [],
+                        "type": 0
+                    },
+                    "skuSpecId": 1016003,
+                    "skuSpecValue": {
+                        "id": 1016003,
+                        "picUrl": "",
+                        "skuSpecId": 1016003,
+                        "value": "1米5"
+                    },
+                    "skuSpecValueId": 1016003
+                },
+                {
+                    "id": 1016006,
+                    "skuId": 1017004,
+                    "skuSpec": {
+                        "id": 1016004,
+                        "name": "颜色",
+                        "skuSpecValueList": [],
+                        "type": 1
+                    },
+                    "skuSpecId": 1016004,
+                    "skuSpecValue": {
+                        "id": 1016006,
+                        "picUrl": "http://yanxuan.nosdn.127.net/59a515877a82e0e640faeea9beaafd68.jpg",
+                        "skuSpecId": 1016004,
+                        "value": "烟墨"
+                    },
+                    "skuSpecValueId": 1016006
+                }
+            ],
+            "primarySku": false,
+            "retailPrice": 299,
+            "sellVolume": 111,
+            "valid": true
+        },
+        {
+            "counterPrice": 0,
+            "id": 1017005,
+            "itemSkuSpecValueList": [
+                {
+                    "id": 1016007,
+                    "skuId": 1017005,
+                    "skuSpec": {
+                        "id": 1016003,
+                        "name": "尺寸",
+                        "skuSpecValueList": [],
+                        "type": 0
+                    },
+                    "skuSpecId": 1016003,
+                    "skuSpecValue": {
+                        "id": 1016003,
+                        "picUrl": "",
+                        "skuSpecId": 1016003,
+                        "value": "1米5"
+                    },
+                    "skuSpecValueId": 1016003
+                },
+                {
+                    "id": 1016008,
+                    "skuId": 1017005,
+                    "skuSpec": {
+                        "id": 1016004,
+                        "name": "颜色",
+                        "skuSpecValueList": [],
+                        "type": 1
+                    },
+                    "skuSpecId": 1016004,
+                    "skuSpecValue": {
+                        "id": 1016007,
+                        "picUrl": "http://yanxuan.nosdn.127.net/a4fe265cb6a3bdd66821f81a3e2ac461.jpg",
+                        "skuSpecId": 1016004,
+                        "value": "薄粉"
+                    },
+                    "skuSpecValueId": 1016007
+                }
+            ],
+            "primarySku": true,
+            "retailPrice": 299,
+            "sellVolume": 95,
+            "valid": true
+        },
+        {
+            "counterPrice": 0,
+            "id": 1017006,
+            "itemSkuSpecValueList": [
+                {
+                    "id": 1016009,
+                    "skuId": 1017006,
+                    "skuSpec": {
+                        "id": 1016003,
+                        "name": "尺寸",
+                        "skuSpecValueList": [],
+                        "type": 0
+                    },
+                    "skuSpecId": 1016003,
+                    "skuSpecValue": {
+                        "id": 1016003,
+                        "picUrl": "",
+                        "skuSpecId": 1016003,
+                        "value": "1米5"
+                    },
+                    "skuSpecValueId": 1016003
+                },
+                {
+                    "id": 1016010,
+                    "skuId": 1017006,
+                    "skuSpec": {
+                        "id": 1016004,
+                        "name": "颜色",
+                        "skuSpecValueList": [],
+                        "type": 1
+                    },
+                    "skuSpecId": 1016004,
+                    "skuSpecValue": {
+                        "id": 1016008,
+                        "picUrl": "http://yanxuan.nosdn.127.net/686c37c519af904cd4e4d051a3404fd4.jpg",
+                        "skuSpecId": 1016004,
+                        "value": "水棕"
+                    },
+                    "skuSpecValueId": 1016008
+                }
+            ],
+            "primarySku": false,
+            "retailPrice": 299,
+            "sellVolume": 150,
+            "valid": true
+        },
+        {
+            "counterPrice": 0,
+            "id": 1017007,
+            "itemSkuSpecValueList": [
+                {
+                    "id": 1016011,
+                    "skuId": 1017007,
+                    "skuSpec": {
+                        "id": 1016003,
+                        "name": "尺寸",
+                        "skuSpecValueList": [],
+                        "type": 0
+                    },
+                    "skuSpecId": 1016003,
+                    "skuSpecValue": {
+                        "id": 1016004,
+                        "picUrl": "",
+                        "skuSpecId": 1016003,
+                        "value": "1米8"
+                    },
+                    "skuSpecValueId": 1016004
+                },
+                {
+                    "id": 1016012,
+                    "skuId": 1017007,
+                    "skuSpec": {
+                        "id": 1016004,
+                        "name": "颜色",
+                        "skuSpecValueList": [],
+                        "type": 1
+                    },
+                    "skuSpecId": 1016004,
+                    "skuSpecValue": {
+                        "id": 1016005,
+                        "picUrl": "http://yanxuan.nosdn.127.net/334fa00e4342e8c27d0abe83fdcd5eb2.jpg",
+                        "skuSpecId": 1016004,
+                        "value": "钴蓝"
+                    },
+                    "skuSpecValueId": 1016005
+                }
+            ],
+            "primarySku": false,
+            "retailPrice": 319,
+            "sellVolume": 162,
+            "valid": true
+        },
+        {
+            "counterPrice": 0,
+            "id": 1017008,
+            "itemSkuSpecValueList": [
+                {
+                    "id": 1016013,
+                    "skuId": 1017008,
+                    "skuSpec": {
+                        "id": 1016003,
+                        "name": "尺寸",
+                        "skuSpecValueList": [],
+                        "type": 0
+                    },
+                    "skuSpecId": 1016003,
+                    "skuSpecValue": {
+                        "id": 1016004,
+                        "picUrl": "",
+                        "skuSpecId": 1016003,
+                        "value": "1米8"
+                    },
+                    "skuSpecValueId": 1016004
+                },
+                {
+                    "id": 1016014,
+                    "skuId": 1017008,
+                    "skuSpec": {
+                        "id": 1016004,
+                        "name": "颜色",
+                        "skuSpecValueList": [],
+                        "type": 1
+                    },
+                    "skuSpecId": 1016004,
+                    "skuSpecValue": {
+                        "id": 1016006,
+                        "picUrl": "http://yanxuan.nosdn.127.net/59a515877a82e0e640faeea9beaafd68.jpg",
+                        "skuSpecId": 1016004,
+                        "value": "烟墨"
+                    },
+                    "skuSpecValueId": 1016006
+                }
+            ],
+            "primarySku": false,
+            "retailPrice": 319,
+            "sellVolume": 178,
+            "valid": true
+        },
+        {
+            "counterPrice": 0,
+            "id": 1017009,
+            "itemSkuSpecValueList": [
+                {
+                    "id": 1016015,
+                    "skuId": 1017009,
+                    "skuSpec": {
+                        "id": 1016003,
+                        "name": "尺寸",
+                        "skuSpecValueList": [],
+                        "type": 0
+                    },
+                    "skuSpecId": 1016003,
+                    "skuSpecValue": {
+                        "id": 1016004,
+                        "picUrl": "",
+                        "skuSpecId": 1016003,
+                        "value": "1米8"
+                    },
+                    "skuSpecValueId": 1016004
+                },
+                {
+                    "id": 1016016,
+                    "skuId": 1017009,
+                    "skuSpec": {
+                        "id": 1016004,
+                        "name": "颜色",
+                        "skuSpecValueList": [],
+                        "type": 1
+                    },
+                    "skuSpecId": 1016004,
+                    "skuSpecValue": {
+                        "id": 1016007,
+                        "picUrl": "http://yanxuan.nosdn.127.net/a4fe265cb6a3bdd66821f81a3e2ac461.jpg",
+                        "skuSpecId": 1016004,
+                        "value": "薄粉"
+                    },
+                    "skuSpecValueId": 1016007
+                }
+            ],
+            "primarySku": false,
+            "retailPrice": 319,
+            "sellVolume": 148,
+            "valid": true
+        },
+        {
+            "counterPrice": 0,
+            "id": 1017010,
+            "itemSkuSpecValueList": [
+                {
+                    "id": 1016017,
+                    "skuId": 1017010,
+                    "skuSpec": {
+                        "id": 1016003,
+                        "name": "尺寸",
+                        "skuSpecValueList": [],
+                        "type": 0
+                    },
+                    "skuSpecId": 1016003,
+                    "skuSpecValue": {
+                        "id": 1016004,
+                        "picUrl": "",
+                        "skuSpecId": 1016003,
+                        "value": "1米8"
+                    },
+                    "skuSpecValueId": 1016004
+                },
+                {
+                    "id": 1016018,
+                    "skuId": 1017010,
+                    "skuSpec": {
+                        "id": 1016004,
+                        "name": "颜色",
+                        "skuSpecValueList": [],
+                        "type": 1
+                    },
+                    "skuSpecId": 1016004,
+                    "skuSpecValue": {
+                        "id": 1016008,
+                        "picUrl": "http://yanxuan.nosdn.127.net/686c37c519af904cd4e4d051a3404fd4.jpg",
+                        "skuSpecId": 1016004,
+                        "value": "水棕"
+                    },
+                    "skuSpecValueId": 1016008
+                }
+            ],
+            "primarySku": false,
+            "retailPrice": 319,
+            "sellVolume": 177,
+            "valid": true
+        }
+    ],
+    "skuMap": {
+        "1016004;1016005": {
+            "counterPrice": 0,
+            "id": 1017007,
+            "itemSkuSpecValueList": [
+                {
+                    "id": 1016011,
+                    "skuId": 1017007,
+                    "skuSpec": {
+                        "id": 1016003,
+                        "name": "尺寸",
+                        "skuSpecValueList": [],
+                        "type": 0
+                    },
+                    "skuSpecId": 1016003,
+                    "skuSpecValue": {
+                        "id": 1016004,
+                        "picUrl": "",
+                        "skuSpecId": 1016003,
+                        "value": "1米8"
+                    },
+                    "skuSpecValueId": 1016004
+                },
+                {
+                    "id": 1016012,
+                    "skuId": 1017007,
+                    "skuSpec": {
+                        "id": 1016004,
+                        "name": "颜色",
+                        "skuSpecValueList": [],
+                        "type": 1
+                    },
+                    "skuSpecId": 1016004,
+                    "skuSpecValue": {
+                        "id": 1016005,
+                        "picUrl": "http://yanxuan.nosdn.127.net/334fa00e4342e8c27d0abe83fdcd5eb2.jpg",
+                        "skuSpecId": 1016004,
+                        "value": "钴蓝"
+                    },
+                    "skuSpecValueId": 1016005
+                }
+            ],
+            "primarySku": false,
+            "retailPrice": 319,
+            "sellVolume": 162,
+            "valid": true
+        },
+        "1016004;1016006": {
+            "counterPrice": 0,
+            "id": 1017008,
+            "itemSkuSpecValueList": [
+                {
+                    "id": 1016013,
+                    "skuId": 1017008,
+                    "skuSpec": {
+                        "id": 1016003,
+                        "name": "尺寸",
+                        "skuSpecValueList": [],
+                        "type": 0
+                    },
+                    "skuSpecId": 1016003,
+                    "skuSpecValue": {
+                        "id": 1016004,
+                        "picUrl": "",
+                        "skuSpecId": 1016003,
+                        "value": "1米8"
+                    },
+                    "skuSpecValueId": 1016004
+                },
+                {
+                    "id": 1016014,
+                    "skuId": 1017008,
+                    "skuSpec": {
+                        "id": 1016004,
+                        "name": "颜色",
+                        "skuSpecValueList": [],
+                        "type": 1
+                    },
+                    "skuSpecId": 1016004,
+                    "skuSpecValue": {
+                        "id": 1016006,
+                        "picUrl": "http://yanxuan.nosdn.127.net/59a515877a82e0e640faeea9beaafd68.jpg",
+                        "skuSpecId": 1016004,
+                        "value": "烟墨"
+                    },
+                    "skuSpecValueId": 1016006
+                }
+            ],
+            "primarySku": false,
+            "retailPrice": 319,
+            "sellVolume": 178,
+            "valid": true
+        },
+        "1016003;1016006": {
+            "counterPrice": 0,
+            "id": 1017004,
+            "itemSkuSpecValueList": [
+                {
+                    "id": 1016005,
+                    "skuId": 1017004,
+                    "skuSpec": {
+                        "id": 1016003,
+                        "name": "尺寸",
+                        "skuSpecValueList": [],
+                        "type": 0
+                    },
+                    "skuSpecId": 1016003,
+                    "skuSpecValue": {
+                        "id": 1016003,
+                        "picUrl": "",
+                        "skuSpecId": 1016003,
+                        "value": "1米5"
+                    },
+                    "skuSpecValueId": 1016003
+                },
+                {
+                    "id": 1016006,
+                    "skuId": 1017004,
+                    "skuSpec": {
+                        "id": 1016004,
+                        "name": "颜色",
+                        "skuSpecValueList": [],
+                        "type": 1
+                    },
+                    "skuSpecId": 1016004,
+                    "skuSpecValue": {
+                        "id": 1016006,
+                        "picUrl": "http://yanxuan.nosdn.127.net/59a515877a82e0e640faeea9beaafd68.jpg",
+                        "skuSpecId": 1016004,
+                        "value": "烟墨"
+                    },
+                    "skuSpecValueId": 1016006
+                }
+            ],
+            "primarySku": false,
+            "retailPrice": 299,
+            "sellVolume": 111,
+            "valid": true
+        },
+        "1016003;1016007": {
+            "counterPrice": 0,
+            "id": 1017005,
+            "itemSkuSpecValueList": [
+                {
+                    "id": 1016007,
+                    "skuId": 1017005,
+                    "skuSpec": {
+                        "id": 1016003,
+                        "name": "尺寸",
+                        "skuSpecValueList": [],
+                        "type": 0
+                    },
+                    "skuSpecId": 1016003,
+                    "skuSpecValue": {
+                        "id": 1016003,
+                        "picUrl": "",
+                        "skuSpecId": 1016003,
+                        "value": "1米5"
+                    },
+                    "skuSpecValueId": 1016003
+                },
+                {
+                    "id": 1016008,
+                    "skuId": 1017005,
+                    "skuSpec": {
+                        "id": 1016004,
+                        "name": "颜色",
+                        "skuSpecValueList": [],
+                        "type": 1
+                    },
+                    "skuSpecId": 1016004,
+                    "skuSpecValue": {
+                        "id": 1016007,
+                        "picUrl": "http://yanxuan.nosdn.127.net/a4fe265cb6a3bdd66821f81a3e2ac461.jpg",
+                        "skuSpecId": 1016004,
+                        "value": "薄粉"
+                    },
+                    "skuSpecValueId": 1016007
+                }
+            ],
+            "primarySku": true,
+            "retailPrice": 299,
+            "sellVolume": 95,
+            "valid": true
+        },
+        "1016003;1016005": {
+            "counterPrice": 0,
+            "id": 1017003,
+            "itemSkuSpecValueList": [
+                {
+                    "id": 1016003,
+                    "skuId": 1017003,
+                    "skuSpec": {
+                        "id": 1016003,
+                        "name": "尺寸",
+                        "skuSpecValueList": [],
+                        "type": 0
+                    },
+                    "skuSpecId": 1016003,
+                    "skuSpecValue": {
+                        "id": 1016003,
+                        "picUrl": "",
+                        "skuSpecId": 1016003,
+                        "value": "1米5"
+                    },
+                    "skuSpecValueId": 1016003
+                },
+                {
+                    "id": 1016004,
+                    "skuId": 1017003,
+                    "skuSpec": {
+                        "id": 1016004,
+                        "name": "颜色",
+                        "skuSpecValueList": [],
+                        "type": 1
+                    },
+                    "skuSpecId": 1016004,
+                    "skuSpecValue": {
+                        "id": 1016005,
+                        "picUrl": "http://yanxuan.nosdn.127.net/334fa00e4342e8c27d0abe83fdcd5eb2.jpg",
+                        "skuSpecId": 1016004,
+                        "value": "钴蓝"
+                    },
+                    "skuSpecValueId": 1016005
+                }
+            ],
+            "primarySku": false,
+            "retailPrice": 299,
+            "sellVolume": 121,
+            "valid": true
+        },
+        "1016003;1016008": {
+            "counterPrice": 0,
+            "id": 1017006,
+            "itemSkuSpecValueList": [
+                {
+                    "id": 1016009,
+                    "skuId": 1017006,
+                    "skuSpec": {
+                        "id": 1016003,
+                        "name": "尺寸",
+                        "skuSpecValueList": [],
+                        "type": 0
+                    },
+                    "skuSpecId": 1016003,
+                    "skuSpecValue": {
+                        "id": 1016003,
+                        "picUrl": "",
+                        "skuSpecId": 1016003,
+                        "value": "1米5"
+                    },
+                    "skuSpecValueId": 1016003
+                },
+                {
+                    "id": 1016010,
+                    "skuId": 1017006,
+                    "skuSpec": {
+                        "id": 1016004,
+                        "name": "颜色",
+                        "skuSpecValueList": [],
+                        "type": 1
+                    },
+                    "skuSpecId": 1016004,
+                    "skuSpecValue": {
+                        "id": 1016008,
+                        "picUrl": "http://yanxuan.nosdn.127.net/686c37c519af904cd4e4d051a3404fd4.jpg",
+                        "skuSpecId": 1016004,
+                        "value": "水棕"
+                    },
+                    "skuSpecValueId": 1016008
+                }
+            ],
+            "primarySku": false,
+            "retailPrice": 299,
+            "sellVolume": 150,
+            "valid": true
+        },
+        "1016004;1016007": {
+            "counterPrice": 0,
+            "id": 1017009,
+            "itemSkuSpecValueList": [
+                {
+                    "id": 1016015,
+                    "skuId": 1017009,
+                    "skuSpec": {
+                        "id": 1016003,
+                        "name": "尺寸",
+                        "skuSpecValueList": [],
+                        "type": 0
+                    },
+                    "skuSpecId": 1016003,
+                    "skuSpecValue": {
+                        "id": 1016004,
+                        "picUrl": "",
+                        "skuSpecId": 1016003,
+                        "value": "1米8"
+                    },
+                    "skuSpecValueId": 1016004
+                },
+                {
+                    "id": 1016016,
+                    "skuId": 1017009,
+                    "skuSpec": {
+                        "id": 1016004,
+                        "name": "颜色",
+                        "skuSpecValueList": [],
+                        "type": 1
+                    },
+                    "skuSpecId": 1016004,
+                    "skuSpecValue": {
+                        "id": 1016007,
+                        "picUrl": "http://yanxuan.nosdn.127.net/a4fe265cb6a3bdd66821f81a3e2ac461.jpg",
+                        "skuSpecId": 1016004,
+                        "value": "薄粉"
+                    },
+                    "skuSpecValueId": 1016007
+                }
+            ],
+            "primarySku": false,
+            "retailPrice": 319,
+            "sellVolume": 148,
+            "valid": true
+        },
+        "1016004;1016008": {
+            "counterPrice": 0,
+            "id": 1017010,
+            "itemSkuSpecValueList": [
+                {
+                    "id": 1016017,
+                    "skuId": 1017010,
+                    "skuSpec": {
+                        "id": 1016003,
+                        "name": "尺寸",
+                        "skuSpecValueList": [],
+                        "type": 0
+                    },
+                    "skuSpecId": 1016003,
+                    "skuSpecValue": {
+                        "id": 1016004,
+                        "picUrl": "",
+                        "skuSpecId": 1016003,
+                        "value": "1米8"
+                    },
+                    "skuSpecValueId": 1016004
+                },
+                {
+                    "id": 1016018,
+                    "skuId": 1017010,
+                    "skuSpec": {
+                        "id": 1016004,
+                        "name": "颜色",
+                        "skuSpecValueList": [],
+                        "type": 1
+                    },
+                    "skuSpecId": 1016004,
+                    "skuSpecValue": {
+                        "id": 1016008,
+                        "picUrl": "http://yanxuan.nosdn.127.net/686c37c519af904cd4e4d051a3404fd4.jpg",
+                        "skuSpecId": 1016004,
+                        "value": "水棕"
+                    },
+                    "skuSpecValueId": 1016008
+                }
+            ],
+            "primarySku": false,
+            "retailPrice": 319,
+            "sellVolume": 177,
+            "valid": true
+        }
+    },
+    "skuSpecList": [
+        {
+            "id": 1016003,
+            "name": "尺寸",
+            "skuSpecValueList": [
+                {
+                    "id": 1016003,
+                    "picUrl": "",
+                    "skuSpecId": 1016003,
+                    "value": "1米5"
+                },
+                {
+                    "id": 1016004,
+                    "picUrl": "",
+                    "skuSpecId": 1016003,
+                    "value": "1米8"
+                }
+            ],
+            "type": 0
+        },
+        {
+            "id": 1016004,
+            "name": "颜色",
+            "skuSpecValueList": [
+                {
+                    "id": 1016005,
+                    "picUrl": "http://yanxuan.nosdn.127.net/334fa00e4342e8c27d0abe83fdcd5eb2.jpg",
+                    "skuSpecId": 1016004,
+                    "value": "钴蓝"
+                },
+                {
+                    "id": 1016006,
+                    "picUrl": "http://yanxuan.nosdn.127.net/59a515877a82e0e640faeea9beaafd68.jpg",
+                    "skuSpecId": 1016004,
+                    "value": "烟墨"
+                },
+                {
+                    "id": 1016007,
+                    "picUrl": "http://yanxuan.nosdn.127.net/a4fe265cb6a3bdd66821f81a3e2ac461.jpg",
+                    "skuSpecId": 1016004,
+                    "value": "薄粉"
+                },
+                {
+                    "id": 1016008,
+                    "picUrl": "http://yanxuan.nosdn.127.net/686c37c519af904cd4e4d051a3404fd4.jpg",
+                    "skuSpecId": 1016004,
+                    "value": "水棕"
+                }
+            ],
+            "type": 1
+        }
+    ],
+    "soldOut": false,
+    "status": 2,
+    "underShelf": false
+}
