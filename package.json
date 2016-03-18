@@ -7,8 +7,8 @@
   },
   "description": "A boutique shop.",
   "scripts": {
+    "crawl": "node ./server/crawl/index",
     "start": "node ./bin/www",
-    "bg": "supervisor ./bin/www",
     "build": "webpack && node ./bin/www",
     "test": "to be added."
   },

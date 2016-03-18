@@ -1,22 +1,25 @@
-# boutique
-boutique shop
+# Boutique
+A boutique shop
 
 ## Start
-### development
+### Prerequisites
+``` js
+$ npm install
+$ node run crawl
+```
+
+### Debug
 ```
 $ npm start
 ```
-### test
-```
-$ (tbd)
-```
 
-### production
+### Production
 ```
 $ npm run build --production
 ```
 
+### Test
 
-## To Do (if have time)
-1. If the project is too large, move common modules to CDN. (react, bootstrap...)
-2. Temporarily require CSS in JS (as global CSS). 
+```
+$ (tbd)
+```
