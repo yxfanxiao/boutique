@@ -1,5 +1,6 @@
-const carousel = require("./carousel")
+import carousel from "./carousel"
 
 export default {
-    ...carousel
+    ...carousel,
+    
 }
