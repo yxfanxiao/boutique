@@ -1,14 +1,21 @@
 require("babel-core/register")
 
 // index carousel
-// require("./carousel")
+var crawlCarousel = require("./carousel")
 
 // nav list
-// require("./nav")
-// require("./subCategory")
+var crawlNav = require("./nav")
+var crawlSubCategory = require("./subCategory")
 
 // products
-require("./products")
+var crwalProducts = require("./products")
 
-// product detail
+
+crawlCarousel()
+	.then(crawlNav)
+	.then(crawlSubCategory)
+	.then(crwalProducts)
+	.then(() => {
+		console.log("Please press Ctrl+C to exit. Then, npm start.");	    
+	})
 
