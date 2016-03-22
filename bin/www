@@ -1,35 +1,37 @@
 // to use ES6
-require("babel-core/register");
-const http = require("http");
-const app = require("../server/app");
-const config = require("../config");
+require("babel-core/register")
+// require("babel-polyfill")
 
-const port = normalizePort(process.env.PORT || config.port);
-app.set("port", port);
+const http = require("http")
+const app = require("../server/app")
+const config = require("../config")
+
+const port = normalizePort(process.env.PORT || config.port)
+app.set("port", port)
 
 // create HTTP server
-const server = http.createServer(app);
+const server = http.createServer(app)
 
 server.listen(port, (error) => {
     if (error) {
-        console.error(error);
+        console.error(error)
     } else {
         console.info(
             ` ${app.get("dev") ? "development" : "production"} ===> listening on port ${port}.  (ง •̀_•́)ง `
-        );
+        )
     }
-});
+})
 
 function normalizePort(val) {
-    const port = parseInt(val, 10);
+    const port = parseInt(val, 10)
 
     if (isNaN(port)) {
-        return val;
+        return val
     }
 
     if (port >= 0) {
-        return port;
+        return port
     }
 
-    return false;
+    return false
 }

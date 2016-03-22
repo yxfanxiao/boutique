@@ -1,11 +1,13 @@
-import { PRODUCTS_RECEIVE_ALL } from "../constants";
+import { PRODUCTS_RECEIVE_PRODUCT_LIST } from "../constants";
 
-function products(state = [], action) {
+function products(state = {
+    productList: {}
+}, action) {
     switch (action.type) {
-        case PRODUCTS_RECEIVE_ALL:
-            return [
-                ...action.products
-            ]
+        case PRODUCTS_RECEIVE_PRODUCT_LIST:
+            return Object.assign({}, state, {
+                productList: action.productList
+            })
         default:
             return state;
     }

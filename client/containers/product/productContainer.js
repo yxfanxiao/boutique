@@ -2,12 +2,12 @@ import React, { Component, PropTypes } from "react"
 import { Link, IndexLink } from "react-router"
 import { connect } from "react-redux"
 
-class ListContainer extends Component {
+class ProductContainer extends Component {
     render() {
         const category = this.props.params
         return (
             <div>
-                <h3>列表页</h3>
+                <h3>商品页</h3>
             </div>
         )
     }
@@ -20,4 +20,4 @@ function select(state) {
     }
 }
 
-export default connect(select)(ListContainer);
+export default connect(select)(ProductContainer);

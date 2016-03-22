@@ -1,18 +1,18 @@
 import shop from "../mockdata/products";
-import { PRODUCTS_RECEIVE_ALL } from "../constants";
+import { PRODUCTS_RECEIVE_PRODUCT_LIST } from "../constants";
 
-function receiveProducts(products) {
+function receiveProductList(productList) {
     return {
-        type: PRODUCTS_RECEIVE_ALL,
-        products
+        type: PRODUCTS_RECEIVE_PRODUCT_LIST,
+        productList
     }
 }
 
-export function getAllProducts() {
+export function fetchProductList() {
     return dispatch => {
-        fetch("/v1/products")
+        fetch("/v1/productList")
             .then(res => res.json())
-            .then(products => dispatch(receiveProducts(products)))
+            .then(productList => dispatch(receiveProductList(productList)))
         // mock data
         // shop.getProducts(products => {
         //     dispatch(receiveProducts(products));

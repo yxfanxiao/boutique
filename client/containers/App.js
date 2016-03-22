@@ -1,7 +1,7 @@
 import "./style"
 
 import React, { Component, PropTypes } from "react"
-import Header from "./Header"
+import Header from "./layout/Header"
 
 export default class App extends Component {
     render() {
@@ -9,7 +9,6 @@ export default class App extends Component {
             <div className="app">
                 <Header />
                 {this.props.children}
-                <h1>Footer</h1>
             </div>
         )
     }

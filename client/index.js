@@ -7,13 +7,14 @@ import { Provider } from "react-redux"
 import store from "./store/configureStore"
 import reducers from "./reducers"
 import * as actions from "./actions"
-import { App, IndexContainer, ListContainer } from "./containers"
+import { App, IndexContainer, ListContainer, ProductContainer } from "./containers"
 
 
 
 // init dispatch
+store.dispatch(actions.fetchNav())
 store.dispatch(actions.fetchCarousel())
-store.dispatch(actions.getAllProducts())
+store.dispatch(actions.fetchProductList())
 
 
 
@@ -23,7 +24,8 @@ render(
             <Route>
                 <Route path="/" component={App}>
                     <IndexRoute component={IndexContainer}/>
-                    <Route path="list" component={ListContainer}/>
+                    <Route path="list/:category" component={ListContainer}/>
+                    <Route path="product/:spuId" component={ProductContainer}/>
                 </Route>
             </Route>
         </Router>

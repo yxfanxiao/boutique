@@ -1,12 +1,15 @@
 // add action here
 const Actions = [
-    // products
-    "PRODUCTS_RECEIVE_ALL",
+    // nav
+    "NAV_RECEIVE",
 
     // carousel
     "CAROUSEL_RECEIVE_PICS",
     "CAROUSEL_NEXT_PICTURE",
-    "CAROUSEL_INDICATOR_HANDLER"
+    "CAROUSEL_INDICATOR_HANDLER",
+
+    // products
+    "PRODUCTS_RECEIVE_PRODUCT_LIST",
 ]
 
 

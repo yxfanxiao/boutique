@@ -1,19 +1,24 @@
-import React, { Component, PropTypes } from "react";
-import ProductItem from "./ProductItem";
+import React, { Component, PropTypes } from "react"
+import ProductItem from "./ProductItem"
+import { Link, IndexLink } from "react-router"
 
 export default class ProductsList extends Component {
     render() {
-        const { products } = this.props;
+        const { productList, category } = this.props
         return (
-            <ul className="products-list">
+            <div>
+                <h1>{productList.title}</h1>
+                <ul className="products-list">
                 {
-                    products.map(product => {
+                    productList.recommendProducts.map(product => {
                         return (
-                            <ProductItem product={product} key={product._id} />       
-                        );
+                            <ProductItem product={product} key={product.spuId} />       
+                        )
                     })
                 }
-            </ul>
-        );
+                </ul>
+                <Link to={`/list/${category}`}>更多{productList.title}好物</Link>
+            </div>
+        )
     }
 }

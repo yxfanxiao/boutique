@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from "react"
 
-import ProductsContainer from "./ProductsContainer"
+import ProductListContainer from "./ProductListContainer"
 import CarouselContainer from "./CarouselContainer"
 
 export default class IndexContainer extends Component {
@@ -8,7 +8,7 @@ export default class IndexContainer extends Component {
         return (
             <div>
                 <CarouselContainer />
-                <ProductsContainer />
+                <ProductListContainer />
             </div>
         )
     }

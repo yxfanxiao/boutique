@@ -1,16 +1,16 @@
-import React, { Component, PropTypes } from "react";
-import { connect } from "react-redux";
-import { Carousel } from "../../components";
+import React, { Component, PropTypes } from "react"
+import { connect } from "react-redux"
+import { Carousel } from "../../components"
 
 class CarouselContainer extends Component {
     render() {
-        const { carousel, dispatch } = this.props;
+        const { carousel, dispatch } = this.props
         return (
             <div className="carousel-container">
                 <h3>Carousel Container</h3>
                 <Carousel carousel={carousel} dispatch={dispatch} />
             </div>
-        );
+        )
     }
 }
 
@@ -21,4 +21,4 @@ function select(state) {
     }
 }
 
-export default connect(select)(CarouselContainer);
+export default connect(select)(CarouselContainer)
