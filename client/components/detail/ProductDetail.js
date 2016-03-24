@@ -33,7 +33,7 @@ export default class ProductDetail extends Component {
                                             <div className="field">
                                                 <ul className="m-tabs">
                                                 {
-                                                    spec.skuSpecValueList.map((specValue, j) => (<li className="tab" key={j}><span className="txt">{specValue.value}</span></li>))
+                                                    spec.skuSpecValueList.map((specValue, j) => (<li className="tab tab-txt" key={j}><span className="txt">{specValue.value}</span></li>))
                                                 }
                                                 </ul>
                                             </div>
@@ -44,7 +44,7 @@ export default class ProductDetail extends Component {
                                             <div className="field">
                                                 <ul className="m-tabs">
                                                 {
-                                                    spec.skuSpecValueList.map((specValue, j) => (<li className="tab" key={j}><span className="txt">{specValue.value}</span></li>))
+                                                    spec.skuSpecValueList.map((specValue, j) => (<li className="tab tab-img" key={j}><img src={specValue.picUrl} className="thumb"></img></li>))
                                                 }
                                                 </ul>
                                             </div>

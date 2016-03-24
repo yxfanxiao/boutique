@@ -50,9 +50,89 @@
             }
         }
         > .info {
-border: 1px solid blue;
+// border: 1px solid blue;
             width: 100%;
             margin-left: 60px;
+
+            > .intro {
+                margin-bottom: 20px;
+                border-bottom: 1px dotted #dedede;
+
+                > .name {
+                    font-size: 20px;
+                    font-weight: 700;
+                    padding-bottom: 20px;
+                    line-height: 20px;
+                    color: #333;
+                }
+                > .desc {
+                    font-size: 13px;
+                    padding-bottom: 18px;
+                    line-height: 18px;
+                    color: #333;
+                }
+            }
+            > .price {
+
+            }
+            > .j-param {
+                > .param {
+
+                    &:after {
+                        content: "";
+                        display: block;
+                        clear: both;
+                    }
+
+                    > .name {
+                        line-height: 30px;
+                        color: #333;
+                        width: 60px;
+                        font-size: 14px;
+                        float: left;
+                    }
+
+                    > .field {
+                        position: relative;
+                        top: -10px;
+
+                        > ul.m-tabs {
+                            word-wrap: break-word;
+                            > li.tab {
+                                float: left;
+                                margin-right: 10px;
+
+                                &.tab-txt {
+                                    border: 1px solid #ddd;
+                                    > .txt {
+                                        padding: 0 25px;
+                                        font-style: 12px;
+                                        color: #333;
+                                        height: 30px;
+                                        line-height: 28px;
+                                    }
+                                }
+
+                                &.tab-img {
+                                    width: 50px;
+                                    height: 50px;
+                                    > .thumb {
+                                        width: 48px;
+                                        height: 48px;
+                                        border: 1px solid #ddd;
+                                        &:hover {
+                                            border: 2px solid red;
+                                            width: 46px;
+                                            height: 46px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
         }
     }
 
