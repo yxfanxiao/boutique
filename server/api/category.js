@@ -1,11 +1,12 @@
 import { Category } from "../models"
+import api from "./index"
 
 export async function productCategories(cb) {
     return Category.find({ isNav: true }, cb)
 }
 
-export async function productSubCategories(categoryId, cb) {
-    return Category.find({ categoryId }, cb)
+export async function productSubCategory(categoryId, cb) {
+    return Category.findOne({ categoryId }, cb)
 }
 
 export async function recommendProductsOfAllCategories() {
@@ -23,3 +24,29 @@ export async function recommendProductsOfAllCategories() {
         resolve(cate)
     })
 }
+
+export async function list(categoryId) {
+    const cate = {}
+    const category = await productSubCategory(categoryId)
+
+    for (let categoryId of category.subCategoryId) {
+        const subCategory = await productSubCategory(categoryId)
+        const products = await api.productIdByCategory(categoryId)
+        Object.assign(cate, {
+            [categoryId]: {
+                title: subCategory.title,
+                desc: subCategory.desc,
+                products: products.map(product => product.spuId)
+            }
+        })
+    }
+    return new Promise((resolve, reject) => {
+        resolve(cate)
+    })
+}
+
+// list("1005000")
+// (async () => {
+//     var a = await list("1005000")
+//     console.log(a)
+// })()

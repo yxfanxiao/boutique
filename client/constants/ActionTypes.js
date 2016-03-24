@@ -10,6 +10,8 @@ const Actions = [
 
     // products
     "PRODUCTS_RECEIVE_PRODUCT_LIST",
+    "PRODUCTS_LIST",
+    "PRODUCT_DETAIL"
 ]
 
 

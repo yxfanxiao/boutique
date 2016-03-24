@@ -7,14 +7,9 @@ export default class Nav extends Component {
         const { nav } = this.props.nav
         return (
             <div>
+            <IndexLink to="/" key={-1}>首页</IndexLink>
             {
-                nav.map((n, i) => {
-                    return (
-                        i === 0
-                            ? <IndexLink to="/" key={i}>{n.title}</IndexLink>
-                            : <Link to="/list" key={i}>{n.title}</Link>
-                    )
-                })   
+                nav.map((n, i) => <Link to={`/list/${n.categoryId}`} key={i}>{n.title}</Link>)
             }
             </div>
         )

@@ -24,7 +24,10 @@ render(
             <Route>
                 <Route path="/" component={App}>
                     <IndexRoute component={IndexContainer}/>
-                    <Route path="list/:category" component={ListContainer}/>
+                    <Route
+                        path="list/:categoryId"
+                        component={ListContainer}
+                    />
                     <Route path="product/:spuId" component={ProductContainer}/>
                 </Route>
             </Route>
