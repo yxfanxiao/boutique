@@ -1,5 +1,3 @@
 /node_modules/
 
 /server/public/assets/javascripts/
-
-/config/hash.json

@@ -6,7 +6,7 @@ const CategorySchema = new Schema({
     subCategoryId: { type: Array },
     isNav: { type: Boolean, default: false },
     title: {type: String },
-    desc: { type: String }
+    desc: { type: String },
     src: { type: String },
     icon: { type: String }
 })
