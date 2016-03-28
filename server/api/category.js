@@ -44,9 +44,3 @@ export async function list(categoryId) {
         resolve(cate)
     })
 }
-
-// list("1005000")
-// (async () => {
-//     var a = await list("1005000")
-//     console.log(a)
-// })()

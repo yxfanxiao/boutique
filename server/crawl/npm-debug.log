@@ -1,0 +1,48 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'run',
+1 verbose cli   'crawl' ]
+2 info using npm@3.5.3
+3 info using node@v5.4.0
+4 verbose run-script [ 'precrawl', 'crawl', 'postcrawl' ]
+5 info lifecycle boutique@0.0.1~precrawl: boutique@0.0.1
+6 silly lifecycle boutique@0.0.1~precrawl: no script for precrawl, continuing
+7 info lifecycle boutique@0.0.1~crawl: boutique@0.0.1
+8 verbose lifecycle boutique@0.0.1~crawl: unsafe-perm in lifecycle true
+9 verbose lifecycle boutique@0.0.1~crawl: PATH: C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;C:\Users\yxfanxiao\git\GitHub\boutique\node_modules\.bin;C:\Users\yxfanxiao\bin;C:\Users\yxfanxiao\AppData\Local\Programs\Git\mingw64\bin;C:\Users\yxfanxiao\AppData\Local\Programs\Git\usr\local\bin;C:\Users\yxfanxiao\AppData\Local\Programs\Git\usr\bin;C:\Users\yxfanxiao\AppData\Local\Programs\Git\usr\bin;C:\Users\yxfanxiao\AppData\Local\Programs\Git\mingw64\bin;C:\Users\yxfanxiao\AppData\Local\Programs\Git\usr\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\MongoDB\Server\3.0\bin;C:\Program Files\nodejs;C:\Users\yxfanxiao\AppData\Local\Programs\Git\cmd;C:\Users\yxfanxiao\AppData\Local\Programs\Git\usr\bin;C:\Users\yxfanxiao\AppData\Local\Programs\Eclipse Che\eclipse-che-4.0.0-RC12\tools\jre\bin;C:\Python27;C:\Users\yxfanxiao\AppData\Local\atom\bin;C:\Users\yxfanxiao\AppData\Local\Programs\Git\usr\bin;C:\Users\yxfanxiao\AppData\Roaming\npm;C:\Program Files\Docker Toolbox;C:\Users\yxfanxiao\AppData\Local\Programs\Git\usr\bin\vendor_perl;C:\Users\yxfanxiao\AppData\Local\Programs\Git\usr\bin\core_perl
+10 verbose lifecycle boutique@0.0.1~crawl: CWD: C:\Users\yxfanxiao\git\GitHub\boutique
+11 silly lifecycle boutique@0.0.1~crawl: Args: [ '/d /s /c', 'node ./server/crawl/index' ]
+12 silly lifecycle boutique@0.0.1~crawl: Returned: code: 1  signal: null
+13 info lifecycle boutique@0.0.1~crawl: Failed to exec crawl script
+14 verbose stack Error: boutique@0.0.1 crawl: `node ./server/crawl/index`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:232:16)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at EventEmitter.emit (events.js:172:7)
+14 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:24:14)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at ChildProcess.emit (events.js:172:7)
+14 verbose stack     at maybeClose (internal/child_process.js:821:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+15 verbose pkgid boutique@0.0.1
+16 verbose cwd C:\Users\yxfanxiao\git\GitHub\boutique\server\crawl
+17 error Windows_NT 10.0.10586
+18 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "crawl"
+19 error node v5.4.0
+20 error npm  v3.5.3
+21 error code ELIFECYCLE
+22 error boutique@0.0.1 crawl: `node ./server/crawl/index`
+22 error Exit status 1
+23 error Failed at the boutique@0.0.1 crawl script 'node ./server/crawl/index'.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the boutique package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     node ./server/crawl/index
+23 error You can get information on how to open an issue for this project with:
+23 error     npm bugs boutique
+23 error Or if that isn't available, you can get their info via:
+23 error     npm owner ls boutique
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]
