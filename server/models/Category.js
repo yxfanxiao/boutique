@@ -7,7 +7,8 @@ const CategorySchema = new Schema({
     isNav: { type: Boolean, default: false },
     title: {type: String },
     desc: { type: String }
-
+    src: { type: String },
+    icon: { type: String }
 })
 
 mongoose.model("Category", CategorySchema)

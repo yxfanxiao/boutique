@@ -29,22 +29,35 @@ function crawlGroup(categoryId) {
                 throw new Error("The lovely crawler crashed!")
             }
             const $ = cheerio.load(body)
-            const subCategoryIds = [] 
+            const subCategoryIds = [] ,
+                categorySrc = $(".w-cateBanner").css("background-image"),
+                categoryDesc = $(".w-cateBanner h2").text()
+
             $(".m-items").each((i, element) => {
                 const $e = $(element)
                 const categoryId = $e.attr("id"),
                     title = $e.find(".name.f-left").text(),
-                    desc = $e.find(".hd .desc").text()
+                    desc = $e.find(".hd .desc").text(),
+                    icon = $e.find(".icon").attr("src")
                 subCategoryIds.push(categoryId)
                 const category = new Category()
                 Object.assign(category, {
                     categoryId,
                     title,
-                    desc
+                    desc,
+                    icon
                 })
                 category.save()
             })
-            Category.update({ categoryId: categoryId }, { $set: { subCategoryId: subCategoryIds }})    
+            Category.update(
+                { categoryId: categoryId }, 
+                {
+                    $set: { 
+                        subCategoryId: subCategoryIds,
+                        src: categorySrc,
+                        desc: categoryDesc
+                    }
+                })    
             resolve()
         })
     })    
