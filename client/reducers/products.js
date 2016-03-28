@@ -1,4 +1,4 @@
-import { PRODUCTS_RECEIVE_PRODUCT_LIST, PRODUCTS_LIST, PRODUCT_DETAIL } from "../constants"
+import { PRODUCTS_RECEIVE_PRODUCT_LIST, PRODUCTS_LIST, PRODUCT_DETAIL, PRODUCT_RETURN_TO_INDEX } from "../constants"
 
 function products(state = {
     productList: {},
@@ -14,13 +14,17 @@ function products(state = {
             })
         case PRODUCTS_LIST:
             return Object.assign({}, state, {
-                currentList: action.currentList,
+                currentList: action.currentList || "",
                 list: action.list
             })
         case PRODUCT_DETAIL:
             return Object.assign({}, state, {
                 currentProduct: action.currentProduct,
                 product: action.product
+            })
+        case PRODUCT_RETURN_TO_INDEX:
+            return Object.assign({}, state, {
+                currentList: ""
             })
         default:
             return state

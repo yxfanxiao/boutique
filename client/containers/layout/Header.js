@@ -6,10 +6,18 @@ import { Nav } from "../../components"
 
 class Header extends Component {
     render() {
-        const { nav, dispatch } = this.props
+        const { nav, currentList, dispatch } = this.props
         return (
-            <div>
-                <Nav nav={nav} dispatch={dispatch} />
+            <div className="header">
+                <div className="menu-wrap">
+                    <div className="menu">
+                        <div className="logo-wrap"><i className="iconfont icon-02jingpinrentiao"></i></div>
+                        <div className="declare">品味良好的生活，从这里开始</div>
+                    </div>
+                </div>
+                <div className="nav-wrap">
+                    <Nav nav={nav} currentList={currentList} dispatch={dispatch} />
+                </div>
             </div>
         )
     }
@@ -17,7 +25,8 @@ class Header extends Component {
 
 function select(state) {
     return {
-        nav: state.nav
+        nav: state.nav,
+        currentList: state.products.currentList
     }
 }
 

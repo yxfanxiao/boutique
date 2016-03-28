@@ -1,5 +1,9 @@
-import shop from "../mockdata/products"
-import { PRODUCTS_RECEIVE_PRODUCT_LIST, PRODUCTS_LIST, PRODUCT_DETAIL } from "../constants"
+// import shop from "../mockdata/products"
+import { PRODUCTS_RECEIVE_PRODUCT_LIST,
+        PRODUCTS_LIST,
+        PRODUCT_DETAIL,
+        PRODUCT_RETURN_TO_INDEX 
+} from "../constants"
 
 function receiveProductList(productList) {
     return {
@@ -50,5 +54,11 @@ function receiveProductBySpuId(spuId, product) {
         type: PRODUCT_DETAIL,
         currentProduct: spuId,
         product
+    }
+}
+
+export function returnToIndex() {
+    return {
+        type: PRODUCT_RETURN_TO_INDEX
     }
 }

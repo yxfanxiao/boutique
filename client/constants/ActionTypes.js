@@ -11,7 +11,20 @@ const Actions = [
     // products
     "PRODUCTS_RECEIVE_PRODUCT_LIST",
     "PRODUCTS_LIST",
-    "PRODUCT_DETAIL"
+    "PRODUCT_DETAIL",
+    "PRODUCT_RETURN_TO_INDEX",
+
+    // detail
+    "DETAIL_RELOAD",
+    "DETAIL_RESET_RELOAD",
+    "DETAIL_THUMB_SRC",
+    "DETAIL_SELECT_PARA",
+    // choose param
+    "DETAIL_PRODUCT_QUANTITY_INCREASE",
+    "DETAIL_PRODUCT_QUANTITY_DECREASE",
+
+    // cart
+    ""
 ]
 
 

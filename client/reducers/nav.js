@@ -1,7 +1,7 @@
 import * as types from "../constants";
 
 function nav(state = {
-    nav: []
+    nav: [],
 }, action) {
     switch (action.type) {
         case types.NAV_RECEIVE:

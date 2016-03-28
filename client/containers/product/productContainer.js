@@ -6,14 +6,14 @@ import * as actions from "../../actions"
 
 class ProductContainer extends Component {
 
-    componentDidMount() {
+    componentWillMount() {
         const { spuId } = this.props.params
         const { products, dispatch } = this.props
         if (products.currentProduct !== spuId) {
             dispatch(actions.receiveProduct(spuId))
         }
     }
-    componentDidUpdate(prevProps, prevState) {
+    componentWillUpdate(prevProps, prevState) {
         const { spuId } = this.props.params
         const { products, dispatch } = this.props
 
@@ -24,7 +24,7 @@ class ProductContainer extends Component {
 
     render() {
         const { spuId } = this.props.params
-        const { products, dispatch } = this.props 
+        const { products, detail, dispatch } = this.props 
 
         return (
             <div>
@@ -33,6 +33,9 @@ class ProductContainer extends Component {
                     products.currentProduct && (
                         <ProductDetail 
                             product={products.product}
+                            spuId={spuId}
+                            detail={detail}
+                            dispatch={dispatch}
                         />
                     )
                 }
@@ -44,7 +47,8 @@ class ProductContainer extends Component {
 
 function select(state) {
     return {
-        products: state.products
+        products: state.products,
+        detail: state.detail
     }
 }
 
