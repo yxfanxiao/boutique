@@ -40,3 +40,15 @@ export function decreaseQuantity() {
     }
 }
 
+export function reloadNav() {
+    return {
+        type: types.DETAIL_RELOAD_NAV
+    }
+}
+
+export function resetNav() {
+    return {
+        type: types.DETAIL_RESET_NAV
+    }
+}
+

@@ -2,7 +2,8 @@
 import { PRODUCTS_RECEIVE_PRODUCT_LIST,
         PRODUCTS_LIST,
         PRODUCT_DETAIL,
-        PRODUCT_RETURN_TO_INDEX 
+        PRODUCT_RETURN_TO_INDEX,
+        PRODUCT_RELOAD_NAV,
 } from "../constants"
 
 function receiveProductList(productList) {
@@ -60,5 +61,12 @@ function receiveProductBySpuId(spuId, product) {
 export function returnToIndex() {
     return {
         type: PRODUCT_RETURN_TO_INDEX
+    }
+}
+
+export function confirmNav(categoryId) {
+    return {
+        type: PRODUCT_RELOAD_NAV,
+        categoryId
     }
 }

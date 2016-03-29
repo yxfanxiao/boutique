@@ -7,7 +7,6 @@ class CarouselContainer extends Component {
         const { carousel, dispatch } = this.props
         return (
             <div className="carousel-container">
-                <h3>Carousel Container</h3>
                 <Carousel carousel={carousel} dispatch={dispatch} />
             </div>
         )

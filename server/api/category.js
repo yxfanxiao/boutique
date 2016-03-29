@@ -16,6 +16,7 @@ export async function recommendProductsOfAllCategories() {
         Object.assign(cate, {
             [category.categoryId]: {
                 title: category.title,
+                desc: category.desc,
                 subCategoryId: category.subCategoryId
             }
         })
@@ -36,6 +37,7 @@ export async function list(categoryId) {
             [categoryId]: {
                 title: subCategory.title,
                 desc: subCategory.desc,
+                icon: subCategory.icon,
                 products: products.map(product => product.spuId)
             }
         })

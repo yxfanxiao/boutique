@@ -2,7 +2,8 @@ import React, { Component, PropTypes } from "react"
 import { connect } from "react-redux"
 import { Link, IndexLink } from "react-router"
 import { Nav } from "../../components"
-
+import * as actions from "../../actions"
+import "./style"
 
 class Header extends Component {
     render() {
@@ -11,7 +12,9 @@ class Header extends Component {
             <div className="header">
                 <div className="menu-wrap">
                     <div className="menu">
-                        <div className="logo-wrap"><i className="iconfont icon-02jingpinrentiao"></i></div>
+                        <Link to="/"  className="logo-wrap" onClick={() => dispatch(actions.returnToIndex())}>
+                            <i className="iconfont icon-02jingpinrentiao"></i>
+                        </Link>
                         <div className="declare">品味良好的生活，从这里开始</div>
                     </div>
                 </div>

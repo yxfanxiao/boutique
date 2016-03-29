@@ -1,3 +1,4 @@
+import "./style"
 import React, { Component, PropTypes } from "react"
 
 import ProductListContainer from "./ProductListContainer"

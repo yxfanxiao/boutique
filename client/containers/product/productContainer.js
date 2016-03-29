@@ -28,11 +28,10 @@ class ProductContainer extends Component {
 
         return (
             <div>
-                <h3>商品页</h3>
                 {
                     products.currentProduct && (
                         <ProductDetail 
-                            product={products.product}
+                            products={products}
                             spuId={spuId}
                             detail={detail}
                             dispatch={dispatch}

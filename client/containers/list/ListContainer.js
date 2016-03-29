@@ -3,6 +3,7 @@ import { Link, IndexLink } from "react-router"
 import { connect } from "react-redux"
 import * as actions from "../../actions"
 import { ProductsList } from "../../components"
+import "./style"
 
 class ListContainer extends Component {
 
@@ -50,16 +51,18 @@ class ListContainer extends Component {
             {
                 p.map((subCategory, i) => {
                     return (
-                        <div key={subCategory}>
-                            <h1>{subCategory}</h1>
-                            <div>
-                                <h1>{list[subCategory].title}</h1>
-                                <h3>{list[subCategory].desc}</h3> 
-                                <ProductsList
-                                    productList={list[subCategory].products.map((spuId) => products[spuId])}
-                                    category={subCategory}
-                                />
+                        <div key={subCategory} className="lists">
+                            <div className="list-header">
+                                <div className="list-title">
+                                    <img className="list-icon" src={list[subCategory].icon} />
+                                    <span className="list-title">{list[subCategory].title}</span>
+                                </div>
+                                <div className="list-desc">{list[subCategory].desc}</div>
                             </div>
+                            <ProductsList
+                                productList={list[subCategory].products.map((spuId) => products[spuId])}
+                                category={subCategory}
+                            />
                         </div>
                     )
                 })

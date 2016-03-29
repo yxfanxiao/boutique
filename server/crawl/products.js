@@ -15,9 +15,9 @@ function crawlProducts() {
                 const len = products.length
                 crawlNextProduct(resolve)
                 function crawlNextProduct(cb) {
-                    const productHref = products.pop()
-                    if (productHref) {
-                        crawlProductDetail(productHref).then(() => {
+                    const product = products.pop()
+                    if (product) {
+                        crawlProductDetail(product).then(() => {
                             crawlNextProduct(cb)
                         })
                     } else {
@@ -53,14 +53,21 @@ function crawlProducts() {
                     const $ = cheerio.load(body)
                     $(".hd a").each((i, element) => {
                         const $e = $(element)
-                        products.push($e.attr("href"))
+                        products.push({
+                            categoryId,
+                            href: $e.attr("href")
+                        })
                     })
                     resolve()
                 })    
             })
         }
 
-        function crawlProductDetail(URI) {
+        function crawlProductDetail(p) {
+            const URI = p.href,
+                categoryId = p.categoryId
+            console.log(URI, categoryId)
+
             return new Promise((resolve, reject) => {
                 request(`http://you.163.com${URI}`, (error, response, body) => {
                     if (error || response.statusCode !== 200) {
@@ -71,25 +78,6 @@ function crawlProducts() {
                     const $ = cheerio.load(body)        
                     let $e = null
 
-                    // const spuId = URI.split(/&/g)[0].split(/=/)[1],
-                    //     categoryId = URI.split(/&/g)[3].split(/=/)[1],
-                    //     src = [],
-                    //     detailSrc = [],
-                    //     name = $(".info .intro .name").text(),
-                    //     desc = $(".info .intro .desc").text(),
-                    //     attributes = {},
-                    //     sku = {}
-                    // $(".list.j-sthumbs img").each((i, ele) => src.push($(ele).attr("src")))
-                    // $(".j-nav-html img").each((i, ele) => detailSrc.push($(ele).attr("src")))
-                    // $(".j-item").each((i, ele) => {
-                    //     const $e = $(ele)
-                    //     Object.assign(attribute, {
-                    //         name : $e.find(".name").text(),
-                    //         value: $e.find(".value").text()
-                    //     })
-                    // })
-
-                    // clear
                     try {
                         const data = JSON.parse(body.match(/json_Data.+\;/g)[0].replace(/^json_Data=/, "").replace(/;$/, ""))
 
@@ -99,6 +87,7 @@ function crawlProducts() {
                              data.itemDetail.picUrl2, data.itemDetail.picUrl3, data.itemDetail.picUrl4)
                         Object.assign(product, {
                             spuId: data.id,
+                            navId: categoryId,
                             categoryId: data.categoryList[1].id,
                             src,
                             detailHtml: data.itemDetail.detailHtml,

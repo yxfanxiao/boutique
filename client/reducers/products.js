@@ -1,4 +1,4 @@
-import { PRODUCTS_RECEIVE_PRODUCT_LIST, PRODUCTS_LIST, PRODUCT_DETAIL, PRODUCT_RETURN_TO_INDEX } from "../constants"
+import { PRODUCTS_RECEIVE_PRODUCT_LIST, PRODUCTS_LIST, PRODUCT_DETAIL, PRODUCT_RETURN_TO_INDEX, PRODUCT_RELOAD_NAV } from "../constants"
 
 function products(state = {
     productList: {},
@@ -25,6 +25,10 @@ function products(state = {
         case PRODUCT_RETURN_TO_INDEX:
             return Object.assign({}, state, {
                 currentList: ""
+            })
+        case PRODUCT_RELOAD_NAV:
+            return Object.assign({}, state, {
+                currentList: action.categoryId
             })
         default:
             return state

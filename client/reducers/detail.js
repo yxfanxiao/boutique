@@ -5,7 +5,8 @@ function detail(state = {
     para0: "",
     para1: "",
     reloadFlag: true,
-    quantity: 1
+    quantity: 1,
+    reloadNavFlag: true
 }, action) {
     switch (action.type) {
         case types.DETAIL_THUMB_SRC:
@@ -34,6 +35,14 @@ function detail(state = {
         case types.DETAIL_PRODUCT_QUANTITY_DECREASE:
             return Object.assign({}, state, {
                 quantity: (state.quantity - 1) || 1 
+            })
+        case types.DETAIL_RELOAD_NAV:
+            return Object.assign({}, state, {
+                reloadNavFlag: false
+            })
+        case types.DETAIL_RESET_NAV:
+            return Object.assign({}, state, {
+                reloadNavFlag: true
             })
         default:
             return state

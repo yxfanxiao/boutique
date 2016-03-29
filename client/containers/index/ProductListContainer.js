@@ -16,12 +16,15 @@ class ProductsContainer extends Component {
                 p.map((category, i) => {
                     return (
                         <div key={category}>
-                            <h1>{products.productList[category].title}</h1>
+                            <div className="list-header">
+                                <span className="title">{products.productList[category].title}</span>
+                                <span className="desc">{products.productList[category].desc}</span>
+                            </div>
                             <ProductsList 
                                 productList={products.productList[category].recommendProducts}
                                 category={category}
                             />
-                        <Link to={`/list/${category}`}>更多{products.productList[category].title}好物</Link>
+                            <Link className="more-details" to={`/list/${category}`}>更多{products.productList[category].title}好物<i className="iconfont icon-xiangyou" /></Link>
                         </div>
                     )
                 })

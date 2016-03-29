@@ -4,27 +4,41 @@ import * as actions from "../../actions"
 
 export default class ProductDetail extends Component {
     componentWillMount() {
-        const { product, detail, dispatch, spuId } = this.props
+        const { products, detail, dispatch, spuId } = this.props,
+            { product } = products        
         if (detail.reloadFlag && product.spuId === spuId) {
             dispatch(actions.reloadDetail(product))
+        }
+        if (detail.reloadNavFlag && product.spuId === spuId && (products.currendList !== product.navId)) {
+            dispatch(actions.confirmNav(product.navId))
+            dispatch(actions.reloadNav())
         }
     }
 
     componentWillUnmount() {
-        const { product, detail, dispatch } = this.props
+        const { dispatch } = this.props
         dispatch(actions.resetReloadFlag())
+        dispatch(actions.resetNav())
+        dispatch(actions.confirmNav(""))
     }
 
     componentDidUpdate(prevProps, prevState) {
-        const { product, detail, dispatch, spuId } = this.props
+        const { products, detail, dispatch, spuId } = this.props,
+            { product } = products        
 
         if (detail.reloadFlag && product.spuId === spuId) {
             dispatch(actions.reloadDetail(product))
         }
+        console.log(detail.reloadNavFlag, products.currentList, product.navId)
+        if (detail.reloadNavFlag && product.spuId === spuId && (products.currentList !== product.navId)) {
+            dispatch(actions.confirmNav(product.navId))
+            dispatch(actions.reloadNav())
+        }
     }
 
     _thumb_onSelected(e) {
-        const { product, detail, dispatch } = this.props
+        const { products, detail, dispatch, spuId } = this.props,
+            { product } = products        
         const src = e.currentTarget.currentSrc
         if (src && detail.thumbSrc !== src) {
             dispatch(actions.selectThumbSrc(src))
@@ -36,7 +50,8 @@ export default class ProductDetail extends Component {
     }
 
     render() {
-        const { product, detail, dispatch } = this.props
+        const { products, detail, dispatch, spuId } = this.props,
+            { product } = products        
 
         return (
             <div className="product-detail">
