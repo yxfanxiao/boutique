@@ -9,27 +9,62 @@
             width: 1090px;
             display: flex;
             margin: auto;
+            justify-content: space-between;
 
             > .logo-wrap {
-                text-decoration: none;
-                position: relative;
-                width: 100px;
-                height: 80px;
-                background-color: rgba(171, 43, 43, 0.95);
-                text-align: center;
-                padding: 15px 0 5px 0;
+                display: flex;
+                align-items: flex-start;
 
-                > i {
-                    font-size: 60px;
-                    color: white;
+                > .logo {
+                    display: inline-block;
+                    text-decoration: none;
+                    width: 100px;
+                    height: 80px;
+                    background-color: rgba(171, 43, 43, 0.95);
+                    text-align: center;
+                    padding: 15px 0 5px 0;
+
+                    > i {
+                        font-size: 60px;
+                        color: white;
+                    }
+                }
+                > .declare {
+                    height: 36px;
+                    width: 200px;
+                    margin-left: 12px;
+                    line-height: 36px;
+                    font-size: 15px;
+                    color: rgb(204, 204, 204);
                 }
             }
-            > .declare {
-                height: 36px;
-                margin-left: 12px;
+
+            > .user-wrap {
+                margin-right: 20px;
                 line-height: 36px;
                 font-size: 15px;
                 color: rgb(204, 204, 204);
+                
+                b {
+
+                }
+
+                > span {
+                    margin: 0 10px;
+                    cursor: pointer;
+                    
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+
+                > .log-in {
+                
+                }
+
+                > .sign-up {
+
+                }
             }
         }
     }

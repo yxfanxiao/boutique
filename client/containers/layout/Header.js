@@ -12,10 +12,17 @@ class Header extends Component {
             <div className="header">
                 <div className="menu-wrap">
                     <div className="menu">
-                        <Link to="/"  className="logo-wrap" onClick={() => dispatch(actions.returnToIndex())}>
-                            <i className="iconfont icon-02jingpinrentiao"></i>
-                        </Link>
-                        <div className="declare">品味良好的生活，从这里开始</div>
+                        <div className="logo-wrap">
+                            <Link to="/"  className="logo" onClick={() => dispatch(actions.returnToIndex())}>
+                                <i className="iconfont icon-02jingpinrentiao"></i>
+                            </Link>
+                            <span className="declare">品味良好的生活，从这里开始</span>
+                        </div>
+                        <div className="user-wrap">
+                            <span className="log-in">登录</span>
+                            <b>|</b>
+                            <span className="sign-up">注册</span>
+                        </div>
                     </div>
                 </div>
                 <div className="nav-wrap">
