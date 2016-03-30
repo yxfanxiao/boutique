@@ -29,7 +29,6 @@ export default class ProductDetail extends Component {
         if (detail.reloadFlag && product.spuId === spuId) {
             dispatch(actions.reloadDetail(product))
         }
-        console.log(detail.reloadNavFlag, products.currentList, product.navId)
         if (detail.reloadNavFlag && product.spuId === spuId && (products.currentList !== product.navId)) {
             dispatch(actions.confirmNav(product.navId))
             dispatch(actions.reloadNav())

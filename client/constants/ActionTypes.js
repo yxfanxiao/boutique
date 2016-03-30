@@ -28,7 +28,16 @@ const Actions = [
     "DETAIL_PRODUCT_QUANTITY_DECREASE",
 
     // cart
-    ""
+    // "",
+
+    // modal
+    "MODAL_CLOSE",
+    "MODAL_OPEN",
+
+    // user
+    "SIGN_UP",
+    "USER_NAME_NOT_QUALIFIED",
+    "USER_PWD_NOT_QUALIFIED",
 ]
 
 

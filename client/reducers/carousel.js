@@ -1,4 +1,4 @@
-import * as types from "../constants";
+import * as types from "../constants"
 
 function carousel(state = {
     currentIndex: 0,
@@ -21,8 +21,8 @@ function carousel(state = {
                 currentIndex: action.currentIndex
             })
         default:
-            return state;
+            return state
     }
 }
 
-export default carousel;
+export default carousel

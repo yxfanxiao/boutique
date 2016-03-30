@@ -1,5 +1,5 @@
 import App from "./App"
-import IndexContainer from "./index/indexContainer"
+import IndexContainer from "./index/IndexContainer"
 import ListContainer from "./list/ListContainer"
 import ProductContainer from "./product/ProductContainer"
 

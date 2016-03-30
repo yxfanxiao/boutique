@@ -5,6 +5,7 @@ import webpackHotMiddleware from "webpack-hot-middleware"
 import webpackConfig from "../webpack.config"
 import router from "./router"
 import api from "./router/api"
+import user from "./router/user"
 import path from "path"
 import favicon from "serve-favicon"
 import config from "../config"
@@ -53,5 +54,6 @@ if (app.get("dev")) {
 // Routers
 app.use("/", router)
 app.use("/v1", api)
+app.use("/user", user)
 
 export default app

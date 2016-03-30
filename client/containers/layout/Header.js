@@ -7,7 +7,7 @@ import "./style"
 
 class Header extends Component {
     render() {
-        const { nav, currentList, dispatch } = this.props
+        const { nav, currentList, modal, user, dispatch } = this.props
         return (
             <div className="header">
                 <div className="menu-wrap">
@@ -19,9 +19,15 @@ class Header extends Component {
                             <span className="declare">品味良好的生活，从这里开始</span>
                         </div>
                         <div className="user-wrap">
-                            <span className="log-in">登录</span>
-                            <b>|</b>
-                            <span className="sign-up">注册</span>
+                        {
+                            user.login
+                                ? <div className="user">LHY</div>
+                                : <div className="user">
+                                    <span className="log-in" onClick={() => dispatch(actions.openModal())}>登录</span>
+                                    <b>|</b>
+                                    <span className="sign-up">注册</span>
+                                  </div>
+                        }
                         </div>
                     </div>
                 </div>
@@ -36,7 +42,9 @@ class Header extends Component {
 function select(state) {
     return {
         nav: state.nav,
-        currentList: state.products.currentList
+        currentList: state.products.currentList,
+        modal: state.modal,
+        user: state.user
     }
 }
 

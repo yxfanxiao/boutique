@@ -1,4 +1,4 @@
-import * as types from "../constants";
+import * as types from "../constants"
 
 function nav(state = {
     nav: [],
@@ -9,8 +9,8 @@ function nav(state = {
                 nav: action.nav
             })
         default:
-            return state;
+            return state
     }
 }
 
-export default nav;
+export default nav
