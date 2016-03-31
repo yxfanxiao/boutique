@@ -21,11 +21,11 @@ class Header extends Component {
                         <div className="user-wrap">
                         {
                             user.login
-                                ? <div className="user">LHY</div>
+                                ? <div className="user">{user.signUp.name}</div>
                                 : <div className="user">
-                                    <span className="log-in" onClick={() => dispatch(actions.openModal())}>登录</span>
+                                    <span className="log-in" onClick={() => dispatch(actions.openModal("log-in", "登录"))}>登录</span>
                                     <b>|</b>
-                                    <span className="sign-up">注册</span>
+                                    <span className="sign-up" onClick={() => dispatch(actions.openModal("sign-up", "注册"))}>注册</span>
                                   </div>
                         }
                         </div>

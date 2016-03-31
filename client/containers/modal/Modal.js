@@ -3,7 +3,8 @@ import "./style"
 import React, { Component, PropTypes } from "react"
 import { connect } from "react-redux"
 import * as actions from "../../actions"
-import Signup from "./Signup"
+import SignUp from "./SignUp"
+import LogIn from "./LogIn"
 
 class Modal extends Component {
 
@@ -12,6 +13,8 @@ class Modal extends Component {
     }
 
     componentWillUnmount() {
+        const { user, dispatch } = this.props
+        dispatch(actions.validateName(null))
         document.querySelector("body").className = ""
     }
 
@@ -25,12 +28,17 @@ class Modal extends Component {
             <div className={className}>
                 <div className="dialog">
                     <div className="dialog-header">
-                        <span>注册</span>
+                        <span>{modal.title}</span>
                         <i className="iconfont icon-0015guanbi"
                             onClick={() => dispatch(actions.closeModal())}>
                         </i>
                     </div>
-                    <Signup user={user} dispatch={dispatch} />
+                    {
+                        modal.dialog === "sign-up" && <SignUp user={user} dispatch={dispatch} /> 
+                    }
+                    {
+                        modal.dialog === "log-in" && <LogIn user={user} dispatch={dispatch} /> 
+                    }
                 </div>
             </div>
         )

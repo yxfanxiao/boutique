@@ -21,6 +21,7 @@ function detail(state = {
             return Object.assign({}, state, {
                 reloadFlag: false,
                 thumbSrc: action.product.src[0],
+                quantity: 1,
                 para0: action.product.skuSpecList[0] && action.product.skuSpecList[0].skuSpecValueList[0].id,
                 para1: action.product.skuSpecList[1] && action.product.skuSpecList[1].skuSpecValueList[0].id
             })

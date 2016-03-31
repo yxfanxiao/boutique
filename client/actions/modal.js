@@ -6,8 +6,10 @@ export function closeModal() {
     }
 }
 
-export function openModal() {
+export function openModal(dialog, title) {
     return {
-        type: types.MODAL_OPEN
+        type: types.MODAL_OPEN,
+        dialog,
+        title
     }
 }

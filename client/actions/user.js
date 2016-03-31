@@ -9,15 +9,13 @@ function signUp(info) {
 }
 
 export function postSignUp(info) {
-    const data = new FormData()
-    data.append("json", JSON.stringify(info))
     return (dispatch, getState) => {
         fetch("/user/signUp", {
             method: "POST",
             headers: {
-                "Content-Type": "application/x-www-form-urlencoded"
+                "Content-Type": "application/json"
             },
-            body: data
+            body: JSON.stringify(info)
         }).then(res => res.json())
           .then(data => {
               if (data.status === 200) {
@@ -47,5 +45,25 @@ export function validateErr(err) {
     return {
         type: types.USER_VALIDATE_ERR,
         err
+    }
+}
+
+export function postLogIn(info) {
+    return (dispatch, getState) => {
+        fetch("/user/logIn", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(info)
+        }).then(res => res.json())
+          .then(data => {
+              if (data.status === 200) {
+                  dispatch(closeModal())
+                  dispatch(signUp(info))
+              } else {
+                  dispatch(validateErr(data.err))
+              }
+          })
     }
 }
