@@ -1,5 +1,5 @@
 import * as types from "../constants"
-import * as actions from "../"
+import { closeModal } from "./modal"
 
 function signUp(info) {
     return {
@@ -18,8 +18,15 @@ export function postSignUp(info) {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
             body: data
-        }).then(res => {})
-          .then(() => dispatch(signUp(info)))
+        }).then(res => res.json())
+          .then(data => {
+              if (data.status === 200) {
+                  dispatch(closeModal())
+                  dispatch(signUp(info))
+              } else {
+                  dispatch(validateErr(data.err))
+              }
+          })
     }
 }
 
@@ -32,6 +39,13 @@ export function validateName(err) {
 export function validatePWD(err) {
     return {
         type: types.USER_PWD_NOT_QUALIFIED,
+        err
+    }
+}
+
+export function validateErr(err) {
+    return {
+        type: types.USER_VALIDATE_ERR,
         err
     }
 }

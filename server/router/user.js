@@ -5,7 +5,10 @@ const router = Router()
 
 router.post("/signUp", (req, res, next) => {
     const { name, pwd } = req.body
-    res.send("ok")
+    res.jsonp({
+        status: 200,
+        err: "wrong"
+    })
 })
 
 export default router

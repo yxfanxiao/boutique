@@ -3,7 +3,7 @@ import * as types from "../constants"
 function user(state = {
     login: false,
     signUp: {},
-    signUpErrorMsg: ""
+    signUpErrorMsg: "",
 }, action) {
     switch (action.type) {
         case types.SIGN_UP:
@@ -17,6 +17,10 @@ function user(state = {
                 signUpErrorMsg: action.err
             })
         case types.USER_PWD_NOT_QUALIFIED:
+            return Object.assign({}, state, {
+                signUpErrorMsg: action.err
+            })
+        case types.USER_VALIDATE_ERR:
             return Object.assign({}, state, {
                 signUpErrorMsg: action.err
             })

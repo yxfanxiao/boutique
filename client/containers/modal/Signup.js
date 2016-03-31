@@ -23,8 +23,7 @@ export default class Signup extends Component {
                         name,
                         pwd
                     }))
-                    dispatch(actions.closeModal())
-                }
+                 }
             }
         }
     }
