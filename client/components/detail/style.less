@@ -78,7 +78,24 @@
                 }
             }
             > .price {
+                display: flex;
+                line-height: 45px;
+                align-items: baseline;
 
+                > .name {
+                    width: 60px;
+                }
+
+                > .desc {
+                    color: #ab2b2b;
+                    font-size: 28px;
+                    font-weight: 600;
+
+                    &:before {
+                        content: "￥";
+                        font-size: 18px;
+                    }
+                }
             }
 
             > .detail-quantity {
@@ -157,16 +174,18 @@
                         line-height: 30px;
                         color: #333;
                         width: 60px;
+                        flex: 0 0 auto;
                         font-size: 14px;
-                        float: left;
                     }
 
                     > .field {
                         > ul.m-tabs {
-                            word-wrap: break-word;
+                            display: flex;
+                            flex-flow: row wrap;
+
                             > li.tab {
-                                float: left;
                                 margin-right: 10px;
+
 
                                 &.tab-txt {
                                     border: 1px solid #ddd;
@@ -177,12 +196,8 @@
                                     margin-bottom: 10px;
                                     cursor: pointer;
 
-                                    &.active {
-                                        border: 2px solid #ab2b2b;
-                                    }
-
-                                    &:hover {
-                                        border: 2px solid #ab2b2b;
+                                    &.active, &:hover, &.selected {
+                                        border: 1px solid #ab2b2b;
                                     }
 
                                     > .txt {
@@ -194,6 +209,7 @@
                                     }
                                 }
 
+
                                 &.tab-img {
                                     width: 50px;
                                     height: 50px;
@@ -203,16 +219,13 @@
                                         border: 1px solid #ddd;
                                         cursor: pointer;
 
-                                        &.active {
-                                            border: 2px solid #ab2b2b;
-                                            width: 46px;
-                                            height: 46px;
+                                        &.active, &:hover {
+                                            border: 1px solid #ab2b2b;
                                         }
-
-                                        &:hover {
-                                            border: 2px solid #ab2b2b;
-                                            width: 46px;
-                                            height: 46px;
+                                    }
+                                    &.selected {
+                                        > .thumb {
+                                            border: 1px solid #ab2b2b;
                                         }
                                     }
                                 }

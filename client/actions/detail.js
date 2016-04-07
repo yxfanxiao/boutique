@@ -52,3 +52,10 @@ export function resetNav() {
     }
 }
 
+export function selectPara(id, para) {
+    return {
+        type: types.DETAIL_SELECT_PARA,
+        para,
+        id
+    }
+}

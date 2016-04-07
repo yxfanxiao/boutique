@@ -22,7 +22,7 @@ export default class ProductDetail extends Component {
         dispatch(actions.confirmNav(""))
     }
 
-    componentDidUpdate(prevProps, prevState) {
+    componentWillUpdate(prevProps, prevState) {
         const { products, detail, dispatch, spuId } = this.props,
             { product } = products        
 
@@ -35,6 +35,49 @@ export default class ProductDetail extends Component {
         }
     }
 
+    addToCart() {
+        const { detail, user, cart, products, dispatch } = this.props 
+        if (!user.login) {
+            dispatch(actions.openModal("log-in", "登录"))
+            return
+        }
+        const { selectedPara, quantity } = detail 
+        const { currentProduct } = products
+        const { name } = user.signUp
+
+        const paras = `${selectedPara}`.split(";")
+        const len = paras.length,
+            para = []
+        if (len === 1) {
+            products.product.skuSpecList[0].skuSpecValueList.forEach(p => {
+                if (p.id === +paras[0]) {
+                    para.push(p.value)
+                }
+            })
+        } else {
+            products.product.skuSpecList.forEach(s => {
+                s.skuSpecValueList.forEach(p => {
+                    if (p.id === +paras[0] || p.id === +paras[1]) {
+                        para.push(p.value)
+                    }
+                })
+            })
+        }
+        dispatch(actions.fetchAddToCart({
+            userName: name,
+            spuId: currentProduct,
+            skuId: selectedPara,
+            pic: detail.thumbSrc,
+            para,
+            quantity,
+            retailPrice: products.product.skuMap[selectedPara].retailPrice
+        }))
+    }
+
+    purchaseRightNow() {
+
+    }
+
     _thumb_onSelected(e) {
         const { products, detail, dispatch, spuId } = this.props,
             { product } = products        
@@ -44,13 +87,19 @@ export default class ProductDetail extends Component {
         }
     }
 
-    _para_onClick() {
-
+    _para_onClick(paraId, e) {
+        const { detail, dispatch } = this.props
+        const targetId = e.currentTarget.getAttribute("data-id"),
+            para = `para${paraId}`
+        if (targetId && targetId !== detail.para) {
+            dispatch(actions.selectPara(targetId, para))
+        }
     }
 
     render() {
         const { products, detail, dispatch, spuId } = this.props,
             { product } = products        
+        const { para0, para1 } = detail 
 
         return (
             <div className="product-detail">
@@ -70,7 +119,20 @@ export default class ProductDetail extends Component {
                             <div className="name">{product.name}</div>
                             <div className="desc">{product.desc}</div>
                         </div> 
-                        <div className="price"></div>
+                        <div className="price">
+                            <div className="name">售价</div>
+                            <div className="desc">
+                            {
+                                para0 && para1 && product.skuMap[`${para0};${para1}`].retailPrice
+                            }
+                            {
+                                para0 && !para1 && product.skuMap[para0].retailPrice
+                            }
+                            {
+                                !para0 && para1 && product.skuMap[para1].retailPrice
+                            }
+                            </div>
+                        </div>
                         <div className="j-param">
                         {
                             product.skuSpecList.map((spec, i) => { 
@@ -80,8 +142,15 @@ export default class ProductDetail extends Component {
                                             <span className="name">{spec.name}</span>
                                             <div className="field">
                                                 <ul className="m-tabs">
-                                                {
-                                                    spec.skuSpecValueList.map((specValue, j) => (<li className="tab tab-txt" key={j}><span className="txt" onClick={this._para_onClick.bind(this)}>{specValue.value}</span></li>))
+                                                { 
+                                                    spec.skuSpecValueList.map((specValue, j) => {
+                                                        const className = classNames({
+                                                            tab: true,
+                                                            "tab-txt": true,
+                                                            selected: specValue.id === detail.para0
+                                                        })
+                                                        return (<li className={className} key={j} data-id={specValue.id} data-value={specValue.value} onClick={this._para_onClick.bind(this, 0)}><span className="txt">{specValue.value}</span></li>)
+                                                    })
                                                 }
                                                 </ul>
                                             </div>
@@ -92,7 +161,14 @@ export default class ProductDetail extends Component {
                                             <div className="field">
                                                 <ul className="m-tabs">
                                                 {
-                                                    spec.skuSpecValueList.map((specValue, j) => (<li className="tab tab-img" key={j}><img title={specValue.value} src={specValue.picUrl} onClick={this._thumb_onSelected.bind(this)} className={"thumb"}></img></li>))
+                                                    spec.skuSpecValueList.map((specValue, j) => {
+                                                        const className = classNames({
+                                                            tab: true,
+                                                            "tab-img": true,
+                                                            selected: specValue.id === detail.para1
+                                                        })
+                                                        return (<li className={className} key={j} data-id={specValue.id} data-value={specValue.value}  onClick={this._para_onClick.bind(this, 1)}><img title={specValue.value} src={specValue.picUrl} onClick={this._thumb_onSelected.bind(this)} className={"thumb"}></img></li>)
+                                                    })
                                                 }
                                                 </ul>
                                             </div>
@@ -106,8 +182,8 @@ export default class ProductDetail extends Component {
                             <Count detail={detail} dispatch={dispatch}/>
                         </div>
                         <div className="detail-purchase">
-                            <div className="purchase-detail">立即购买</div>
-                            <div className="add-detail-to-cart"><i className="iconfont icon-cart2"></i>加入购物车</div>
+                            <div className="purchase-detail" onClick={this.purchaseRightNow.bind(this)}>立即购买</div>
+                            <div className="add-detail-to-cart" onClick={this.addToCart.bind(this)}><i className="iconfont icon-cart2"></i>加入购物车</div>
                         </div>
                     </div>
                 </div>

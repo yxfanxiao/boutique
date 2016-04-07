@@ -24,7 +24,7 @@ class ProductContainer extends Component {
 
     render() {
         const { spuId } = this.props.params
-        const { products, detail, dispatch } = this.props 
+        const { products, detail, user, cart, dispatch } = this.props 
 
         return (
             <div>
@@ -34,6 +34,8 @@ class ProductContainer extends Component {
                             products={products}
                             spuId={spuId}
                             detail={detail}
+                            cart={cart}
+                            user={user}
                             dispatch={dispatch}
                         />
                     )
@@ -47,7 +49,9 @@ class ProductContainer extends Component {
 function select(state) {
     return {
         products: state.products,
-        detail: state.detail
+        detail: state.detail,
+        cart: state.cart,
+        user: state.user
     }
 }
 

@@ -28,7 +28,8 @@ const Actions = [
     "DETAIL_PRODUCT_QUANTITY_DECREASE",
 
     // cart
-    // "",
+    "ADD_TO_CART",
+    "GET_CART",
 
     // modal
     "MODAL_CLOSE",

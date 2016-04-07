@@ -3,11 +3,13 @@ import Carousel from "./carousel"
 import Nav from "./nav"
 import ProductDetail from "./detail"
 import Count from "./count"
+import Cart from "./cart"
 
 export default {
     ProductsList,
     Carousel,
     Nav,
     ProductDetail,
-    Count
+    Count,
+    Cart,
 }

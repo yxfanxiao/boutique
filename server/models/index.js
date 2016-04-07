@@ -4,6 +4,7 @@ import Product from "./Product"
 import Carousel from "./Carousel"
 import Category from "./Category"
 import User from "./User"
+import Cart from "./Cart"
 
 
 
@@ -20,7 +21,8 @@ export default combineSchemas({
     Product,
     Carousel,
     Category,
-    User
+    User,
+    Cart,
 })
 
 

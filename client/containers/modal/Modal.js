@@ -18,6 +18,14 @@ class Modal extends Component {
         document.querySelector("body").className = ""
     }
 
+    closeButton_onClick() {
+        const { dispatch } = this.props
+        document.querySelector(".dialog").className = "dialog close";
+        setTimeout(() => {
+            dispatch(actions.closeModal())
+        }, 1000)
+    }
+
     render() {
         const { modal, user, dispatch } = this.props
         const className = classNames({
@@ -30,7 +38,7 @@ class Modal extends Component {
                     <div className="dialog-header">
                         <span>{modal.title}</span>
                         <i className="iconfont icon-0015guanbi"
-                            onClick={() => dispatch(actions.closeModal())}>
+                            onClick={this.closeButton_onClick.bind(this)}>
                         </i>
                     </div>
                     {

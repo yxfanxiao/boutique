@@ -7,7 +7,7 @@ import "./style"
 
 class Header extends Component {
     render() {
-        const { nav, currentList, modal, user, dispatch } = this.props
+        const { nav, currentList, cart, modal, user, dispatch } = this.props
         return (
             <div className="header">
                 <div className="menu-wrap">
@@ -33,6 +33,13 @@ class Header extends Component {
                 </div>
                 <div className="nav-wrap">
                     <Nav nav={nav} currentList={currentList} dispatch={dispatch} />
+                    <div className="cart-button">
+                        <Link to="/cart">
+                            <i className="iconfont icon-cart2" />
+                            <span>购物车</span>
+                            <span className="quality">{cart.quality}</span>
+                        </Link>
+                    </div>
                 </div>
             </div>
         )
@@ -44,7 +51,8 @@ function select(state) {
         nav: state.nav,
         currentList: state.products.currentList,
         modal: state.modal,
-        user: state.user
+        user: state.user,
+        cart: state.cart
     }
 }
 

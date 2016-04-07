@@ -27,6 +27,11 @@ body.modal-open {
         top: 150px;
         right: 0;
         padding: 20px;
+        transition: transform 0.5s ease;
+
+        &.close {
+            transform: rotateY(90deg);
+        }
 
         > .dialog-header {
             position: relative;
