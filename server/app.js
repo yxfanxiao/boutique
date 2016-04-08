@@ -16,7 +16,6 @@ import bodyParser from "body-parser"
 import cookieParser from "cookie-parser"
 import session from "express-session"
 import MongoStore from "connect-mongo"
-MongoStore(session)
 
 const app = express()
 
@@ -28,9 +27,16 @@ app.use(favicon(path.join(__dirname, "public" , "assets" , "images" , "icon.ico"
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cookieParser(config.cookieSecret))
-// app.use(session({
-//     secret: config.sessionSecret
-// }))
+const MS = MongoStore(session)
+app.use(session({
+    secret: config.sessionSecret,
+    resave: false,
+    saveUninitialized: false,
+    store: new MS({
+        mongooseConnection: mongoose.connection,
+        ttl: 1 * 24 * 60 * 60                           // 1 day
+    })
+}))
 
 // develpoment or production environment
 app.set("dev", process.env.NODE_ENV !== "production")

@@ -46,3 +46,10 @@ export function fetchAddToCart(info) {
           })
     }
 }
+
+export function deleteItem(item) {
+    return {
+        type: types.DELETE_ITEM,
+        item
+    }
+}

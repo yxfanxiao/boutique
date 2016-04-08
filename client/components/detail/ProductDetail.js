@@ -67,6 +67,7 @@ export default class ProductDetail extends Component {
             userName: name,
             spuId: currentProduct,
             skuId: selectedPara,
+            title: products.product.name,
             pic: detail.thumbSrc,
             para,
             quantity,

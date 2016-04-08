@@ -29,7 +29,7 @@ render(
                         component={ListContainer}
                     />
                     <Route path="product/:spuId" component={ProductContainer}/>
-                    <Route path="cart" component={CartContainer}/>
+                    <Route path="my-cart" component={CartContainer}/>
                 </Route>
             </Route>
         </Router>

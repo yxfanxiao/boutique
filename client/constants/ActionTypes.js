@@ -30,6 +30,7 @@ const Actions = [
     // cart
     "ADD_TO_CART",
     "GET_CART",
+    "DELETE_ITEM",
 
     // modal
     "MODAL_CLOSE",

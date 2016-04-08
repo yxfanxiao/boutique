@@ -28,7 +28,7 @@ export default class logIn extends Component {
         return (
             <div className="dialog-wrap log-in">
                 <div className="group name">
-                    <input type="text" ref="name" placeholder="用户名(邮箱)" value="liu@qq.com"/>
+                    <input type="text" ref="name" placeholder="用户名(邮箱)" value="liu@qq.com" />
                 </div>
                 <div className="group pwd">
                     <input type="password" ref="pwd" placeholder="密码(6-12位, 数字字母下划线)" value="123456" />

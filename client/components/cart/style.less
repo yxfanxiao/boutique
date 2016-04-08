@@ -1,5 +1,4 @@
 .cart {
-    border: 1px solid black;
 
     width: 1090px;
     display: flex;
@@ -11,9 +10,109 @@
         color: #999;
     }
 
-    > .cart-list {
-        > .cart-item {
+    > .cart-content {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: 20px;
 
+        > .cart-head {
+            color: #999;
+            border: 1px solid #eee;
+            background: #f5f5f5;
+            font-size: 12px;
+            line-height: 50px;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+
+            > .title {
+                flex: 2;
+                
+            }
+            > .spec {
+                flex: 1;
+                
+            }
+            > .quantity {
+                flex: 1;
+                
+            }
+            > .retail-price {
+                flex: 1;
+                
+            }
+            > .sub-total {
+                flex: 1;
+            }
+            > .operation {
+                flex: 1;
+            }
+        }
+
+        > .cart-list {
+            display: flex;
+            flex-flow: column nowrap;
+
+            > .cart-item {
+                border: 1px solid #eee;
+                flex: 0 0 140px;
+                color: #333;
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;      
+                font-size: 15px;
+                text-align: center;
+                line-height: 30px;
+
+                > a:nth-child(1) { 
+                    flex: 1;
+                    > img {
+                        width: 100px;
+                        height: 100px;
+                        background: #f4f4f4;
+                    }
+                }
+                > a:nth-child(2) { 
+                    flex: 1;
+                    > .title {
+                        width: 150px;
+                    } 
+                }
+                > a {
+                    text-decoration: none;
+                    color: #333;
+                }
+                > .para {
+                    flex: 1;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: space-around;
+                    color: #999;
+
+                    > span {
+
+                    }
+                }
+                > .quantity {
+                    flex: 1;
+
+                }
+                > .price {              
+                    font-weight: 700;
+                    flex: 1;
+                    &:before {
+                        content: "￥";
+                    }
+                }
+                > .delete {
+                    flex: 1;
+                    color: #999;
+                    cursor: pointer;
+                    &:hover {
+                        color: #ab2b2b;
+                    }
+                }
+            }
         }
     }
 }

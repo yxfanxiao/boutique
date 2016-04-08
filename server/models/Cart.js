@@ -6,9 +6,10 @@ const CartSchema = new Schema({
     create_at: { type: Date, default: Date.now },
     spuId: { type: String },
     skuId: { type: String },
+    title: { type: String },
     pic: { type: String },
     para: { type: Array },
-    quality: { type: String },
+    quantity: { type: String },
     retailPrice: { type: Number }
 })
 

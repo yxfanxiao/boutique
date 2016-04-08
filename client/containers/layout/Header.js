@@ -34,10 +34,10 @@ class Header extends Component {
                 <div className="nav-wrap">
                     <Nav nav={nav} currentList={currentList} dispatch={dispatch} />
                     <div className="cart-button">
-                        <Link to="/cart">
+                        <Link to="/my-cart">
                             <i className="iconfont icon-cart2" />
                             <span>购物车</span>
-                            <span className="quality">{cart.quality}</span>
+                            <span className="quality">{cart.quantity}</span>
                         </Link>
                     </div>
                 </div>

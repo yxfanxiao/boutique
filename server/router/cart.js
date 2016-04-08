@@ -19,7 +19,7 @@ router.post("/", (req, res, next) => {
             return res.jsonp({
                 status: 200
             })
-        }, () => {
+        }, (err) => {
             return res.jsonp({
                 status: 202,
                 err: "添加到购物车失败"
