@@ -3,7 +3,6 @@ import { Cart } from "../models"
 export function addToCart(info) {
     return Cart.findOne({skuId: info.skuId})
         .then((item) => {
-            console.log(item)
             if (item) {
                 return Cart.where({skuId: info.skuId})
                     .update({ $set: {quantity: +item.quantity + info.quantity}}) 
@@ -27,4 +26,8 @@ export function addToCart(info) {
 
 export function getCart(name, cb) {
     return Cart.find({ userName: name }, null, { sort: {create_at: -1}}, cb)
+}
+
+export function deleteCart(id) {
+    return Cart.remove({_id: id})
 }

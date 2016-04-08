@@ -3,7 +3,7 @@ import * as types from "../constants"
 function addToCart(info) {
     return {
         type: types.ADD_TO_CART,
-        ...info
+        item: info
     }
 }
 
@@ -42,6 +42,21 @@ export function fetchAddToCart(info) {
                   dispatch(addToCart(info))
               } else {
                   alert("添加到购物车失败！")
+              }
+          })
+    }
+}
+
+export function fetchDeleteItem(item) {
+    return (dispatch, getState) => {
+        fetch(`/cart/${item._id}`, {
+            method: "DELETE"
+        }).then(res => res.json())
+          .then(data => {
+              if (data.status === 200) {
+                  dispatch(deleteItem(item))
+              } else {
+                  alert("删除失败！")
               }
           })
     }

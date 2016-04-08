@@ -39,7 +39,7 @@ export default class Cart extends Component {
                             </div>
                             <ul className="cart-list">
                             {
-                                cart.cart && cart.cart.map((item, i) => <CartItem item={item} cart={cart} dispatch={dispatch} />)
+                                cart.cart && cart.cart.map((item, i) => <CartItem item={item} cart={cart} dispatch={dispatch} key={i}/>)
                             }
                             </ul>
                         </div>

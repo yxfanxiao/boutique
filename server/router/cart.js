@@ -27,4 +27,18 @@ router.post("/", (req, res, next) => {
         })
 })
 
+router.delete("/:id", (req, res, next) => {
+    Cart.deleteCart(req.params.id)
+        .then(() => {
+            return res.jsonp({
+                status: 200
+            })
+        }, (err) => {
+            return res.jsonp({
+                status: 202,
+                err: "删除失败"
+            })
+        })
+})
+
 export default router

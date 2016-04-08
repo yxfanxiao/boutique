@@ -5,7 +5,7 @@ import * as actions from "../../actions"
 export default class CartItem extends Component {
     deleteItem() {
         const { item, cart, dispatch } = this.props
-        dispatch(actions.deleteItem(item))
+        dispatch(actions.fetchDeleteItem(item))
     }
 
     render() {

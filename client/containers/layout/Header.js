@@ -6,6 +6,14 @@ import * as actions from "../../actions"
 import "./style"
 
 class Header extends Component {
+    componentDidUpdate() {
+        const { user, cart, dispatch } = this.props     
+        console.log(111111111111, user.login, cart.cart)
+        if (user.login && !cart.cart) {
+            dispatch(actions.fetchCart(user.signUp.name))
+        }
+    }
+
     render() {
         const { nav, currentList, cart, modal, user, dispatch } = this.props
         return (

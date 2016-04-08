@@ -7,9 +7,8 @@ function cart(state = {
     switch (action.type) {
         case types.ADD_TO_CART:
             return Object.assign({}, state, {
-                // 写到这里，要即时更新购物车的数量。。
-                // cart: state
-                // quantity: state.cart.some(c => c.skuId == item.skuId) ? state.quantity : state.quantity + 1
+                cart: combineCart(state.cart, action.item),
+                quantity: combineCart(state.cart, action.item).length
             })
         case types.GET_CART:
             return Object.assign({}, state, {
@@ -28,6 +27,17 @@ function cart(state = {
 
 export default cart
 
-function combineCart(state, item) {
-
+function combineCart(cart, item) {
+    let flag = false
+    cart.map(s => {
+        if (s.skuId == item.skuId) {
+            flag = true
+            s.quantity += item.quantity
+        }
+        return s
+    })
+    if (!flag) {
+        cart.push(item)
+    }
+    return cart
 }
