@@ -68,3 +68,56 @@ export function deleteItem(item) {
         item
     }
 }
+
+export function fetchAddItemQuantity(item) {
+    return (dispatch, getState) => {
+        fetch(`/cart/${item._id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({quantity: +item.quantity + 1})
+        }).then(res => res.json())
+          .then(data => {
+              if (data.status === 200) {
+                  dispatch(addItemQuantity(item))
+              } else {
+                  alert("增加失败！")
+              }
+          })
+    }
+}
+
+function addItemQuantity(item) {
+    return {
+        type: types.ADD_ITEM_QUANTITY,
+        item
+    }
+}
+
+export function fetchDecreaseItemQuantity(item) {
+    return (dispatch, getState) => {
+        fetch(`/cart/${item._id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({quantity: +item.quantity - 1})
+        }).then(res => res.json())
+          .then(data => {
+              if (data.status === 200) {
+                  dispatch(decreaseItemQuantity(item))
+              } else {
+                  alert("增加失败！")
+              }
+          })
+    }
+}
+
+function decreaseItemQuantity(item) {
+    return {
+        type: types.DECREASE_ITEM_QUANTITY,
+        item
+    }
+}
+

@@ -44,26 +44,100 @@
                 line-height: 36px;
                 font-size: 15px;
                 color: rgb(204, 204, 204);
-                
-                b {
+              
 
-                }
+                > .user-log-sign {
+                    .log-in {
+                        margin: 0 10px; 
+                        &:hover {
+                            color: #fff;
+                            cursor: pointer;
+                        }               
+                    }
 
-                span {
-                    margin: 0 10px;
-                    cursor: pointer;
-                    
-                    &:hover {
-                        color: #fff;
+                    .sign-up {
+                        margin: 0 10px;
+                        &:hover {
+                            color: #fff;
+                            cursor: pointer;
+                        }            
                     }
                 }
 
-                .log-in {
-                
-                }
+                > .user {
+                    line-height: 36px;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    align-items: center;
 
-                .sign-up {
+                    > .user-name {
+                        display: flex;
+                        opacity: 0.8;
+                        height: 36px;
+                        line-height: 36px;
 
+                        > i {
+                            margin-top: 2px;
+                            font-size: 30px;
+                            opacity: 0.5;
+                            transition: transform 0.5s;
+                            transform: rotate(180deg);
+                        }
+
+                        &:hover {
+                            opacity: 0.8;
+                            color: #fff;
+                            cursor: pointer;
+
+                            > i {
+                                transform: rotate(0deg);
+                            }
+                        }
+                    }
+                    > ul {
+                        display: none;
+                    }
+                    &:hover {
+                        > ul {
+                            width: 100%;
+                            display: flex;
+                            flex-flow: column nowrap;
+                            align-items: stretch;
+                            background: #fff;
+                            border: 1px solid #ddd;
+                            z-index: 10;
+                            color: #999;
+
+                            > li {
+                                text-align: center;
+                                margin: 0 10px;
+                                border-bottom: 1px solid #ddd;
+                                cursor: pointer;
+
+                                &:hover {
+                                    color: #ab2b2b;
+                                }
+                            }
+
+                            a {
+                                text-decoration: none;
+                                color: #999;
+                                &:hover {
+                                    color: #ab2b2b;
+                                }
+                            }
+
+                            &:before {
+                                content: "";
+                                width: 10px;
+                                height: 10px;
+                                background: red;
+                                position: absolute;
+                                top: -5px;
+                                left: 10px;
+                            }
+                        }
+                    }
                 }
             }
         }

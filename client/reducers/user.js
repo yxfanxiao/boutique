@@ -24,6 +24,18 @@ function user(state = {
             return Object.assign({}, state, {
                 errorMsg: action.err
             })
+        case types.UPDATE_ACCOUNT:
+            return Object.assign({}, state, {
+                signUp: {
+                    ...state.signUp,
+                    account: action.user.account
+                }
+            })
+        case types.LOG_OUT:
+            return Object.assign({}, state, {
+                login: false,
+                signUp: {}
+            })
         default:
             return state
     }

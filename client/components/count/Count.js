@@ -2,24 +2,13 @@ import React, { Component, PropTypes } from "react"
 import * as actions from "../../actions"
 
 export default class Count extends Component {
-
-    handlerIncrease() {
-        const { detail,dispatch } = this.props
-        dispatch(actions.increaseQuantity())
-    }
-
-    handlerDecrease () {
-        const { detail,dispatch } = this.props
-        dispatch(actions.decreaseQuantity())
-    }
-
     render() {
-        const { quantity } = this.props.detail
+        const { quantity, handlerDecrease, handlerIncrease } = this.props
         return (
             <div className="count">
-                <span className="less" onClick={this.handlerDecrease.bind(this)}><i className="iconfont icon-font46"></i></span>
+                <span className="less" onClick={handlerDecrease.bind(this)}><i className="iconfont icon-font46"></i></span>
                 <span className="j-count">{quantity}</span>
-                <span className="more" onClick={this.handlerIncrease.bind(this)}><i className="iconfont icon-jiahao"></i></span>
+                <span className="more" onClick={handlerIncrease.bind(this)}><i className="iconfont icon-jiahao"></i></span>
             </div>
         )
     }

@@ -6,9 +6,18 @@ import * as actions from "../../actions"
 import "./style"
 
 class Header extends Component {
+    reCharge() {
+        const { dispatch, user } = this.props 
+        dispatch(actions.postReCharge(user.signUp.name))
+    }
+
+    logOut() {
+        const { user, dispatch } = this.props
+        dispatch(actions.logOut())
+    }
+
     componentDidUpdate() {
         const { user, cart, dispatch } = this.props     
-        console.log(111111111111, user.login, cart.cart)
         if (user.login && !cart.cart) {
             dispatch(actions.fetchCart(user.signUp.name))
         }
@@ -29,8 +38,16 @@ class Header extends Component {
                         <div className="user-wrap">
                         {
                             user.login
-                                ? <div className="user">{user.signUp.name}</div>
-                                : <div className="user">
+                                ? <div className="user">
+                                    <span className="user-name">{user.signUp.name}<i className="iconfont icon-0037xiangxia" /></span>
+                                    <ul>
+                                        <li className="" onClick={this.reCharge.bind(this)}>充值</li>
+                                        <li className="">余额￥{user.signUp.account || 0}</li>
+                                        <li className=""><Link to="/order"  className="">我的订单</Link></li>
+                                        <li className="" onClick={this.logOut.bind(this)}>注销</li>
+                                    </ul>
+                                  </div>
+                                : <div className="user-log-sign">
                                     <span className="log-in" onClick={() => dispatch(actions.openModal("log-in", "登录"))}>登录</span>
                                     <b>|</b>
                                     <span className="sign-up" onClick={() => dispatch(actions.openModal("sign-up", "注册"))}>注册</span>

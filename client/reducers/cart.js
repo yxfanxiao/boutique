@@ -20,6 +20,24 @@ function cart(state = {
                 quantity: state.quantity - 1,
                 cart: state.cart.filter((item) => item.skuId !== action.item.skuId)
             })
+        case types.ADD_ITEM_QUANTITY:
+            return Object.assign({}, state, {
+                cart: state.cart.map(item => {
+                    if (item.skuId === action.item.skuId) {
+                        item.quantity++
+                    }
+                    return item
+                })
+            })
+        case types.DECREASE_ITEM_QUANTITY:
+            return Object.assign({}, state, {
+                cart: state.cart.map(item => {
+                    if (item.skuId === action.item.skuId) {
+                        item.quantity--
+                    }
+                    return item
+                })
+            })
         default:
             return state
     }

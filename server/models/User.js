@@ -5,6 +5,7 @@ const UserSchema = new Schema({
     name: { type: String },
     pwd: { type: String },
     tel: { type: String },
+    account: { type: Number, default: 0 },
 })
 
 UserSchema.index({ name: 1 }, { unique: true })

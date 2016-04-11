@@ -60,10 +60,40 @@ export function postLogIn(info) {
           .then(data => {
               if (data.status === 200) {
                   dispatch(closeModal())
-                  dispatch(signUp(info))
+                  dispatch(signUp(data.user))
               } else {
                   dispatch(validateErr(data.err))
               }
           })
+    }
+}
+
+export function postReCharge(name) {
+    return (dispatch, getState) => {
+        fetch("/user/reCharge", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({name: name})
+        }).then(res => res.json())
+          .then(data => {
+              if (data.status === 200) {
+                  dispatch(updateAccount(data.user))
+              }
+          })
+    }
+}
+
+export function updateAccount(user) {
+    return {
+        type: types.UPDATE_ACCOUNT,
+        user
+    }
+}
+
+export function logOut() {
+    return {
+        type: types.LOG_OUT     
     }
 }

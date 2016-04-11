@@ -5,6 +5,7 @@ import * as detail from "./detail"
 import * as modal from "./modal"
 import * as user from "./user"
 import * as cart from "./cart"
+import * as order from "./order"
 
 export default Object.assign(
     {},
@@ -15,4 +16,5 @@ export default Object.assign(
     modal,
     user,
     cart,
+    order,
 )

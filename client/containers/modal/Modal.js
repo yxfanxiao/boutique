@@ -5,6 +5,7 @@ import { connect } from "react-redux"
 import * as actions from "../../actions"
 import SignUp from "./SignUp"
 import LogIn from "./LogIn"
+import Pay from "./Pay"
 
 class Modal extends Component {
 
@@ -27,7 +28,7 @@ class Modal extends Component {
     }
 
     render() {
-        const { modal, user, dispatch } = this.props
+        const { modal, user, pay, cart, dispatch } = this.props
         const className = classNames({
             modal,
             open: modal.status === "open"
@@ -47,6 +48,9 @@ class Modal extends Component {
                     {
                         modal.dialog === "log-in" && <LogIn user={user} dispatch={dispatch} /> 
                     }
+                    {
+                        modal.dialog === "pay" && <Pay cart={cart} user={user} pay={pay} dispatch={dispatch} />
+                    }
                 </div>
             </div>
         )
@@ -56,7 +60,9 @@ class Modal extends Component {
 function select(state) {
     return {
         modal: state.modal,
-        user: state.user
+        user: state.user,
+        order: state.order,
+        cart: state.cart,
     }
 }
 

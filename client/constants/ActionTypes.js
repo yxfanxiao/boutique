@@ -31,6 +31,8 @@ const Actions = [
     "ADD_TO_CART",
     "GET_CART",
     "DELETE_ITEM",
+    "ADD_ITEM_QUANTITY",
+    "DECREASE_ITEM_QUANTITY",
 
     // modal
     "MODAL_CLOSE",
@@ -41,6 +43,8 @@ const Actions = [
     "USER_NAME_NOT_QUALIFIED",
     "USER_PWD_NOT_QUALIFIED",
     "USER_VALIDATE_ERR",
+    "UPDATE_ACCOUNT",
+    "LOG_OUT",
 ]
 
 

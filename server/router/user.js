@@ -35,7 +35,8 @@ router.post("/logIn", (req, res, next) => {
             }
             if (user.pwd === pwd) {
                 return res.jsonp({
-                    status: 200
+                    status: 200,
+                    user: user
                 })
             } else {
                 return res.jsonp({
@@ -45,5 +46,25 @@ router.post("/logIn", (req, res, next) => {
             }
         })
 })
+
+router.post("/reCharge", (req, res, next) => {
+    const { name } = req.body
+
+    User.reCharge(name, 100, () => {
+         User.findUserByName(name, (err, user) => {
+             if (err) {
+                return res.jsonp({
+                    status: 202,
+                    err: "充值失败"
+                })
+             }
+            return res.jsonp({
+                status: 200,
+                user: user
+            })
+        })
+    })        
+})
+
 
 export default router

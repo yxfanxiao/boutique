@@ -41,4 +41,18 @@ router.delete("/:id", (req, res, next) => {
         })
 })
 
+router.put("/:id", (req, res, next) => {
+    Cart.modifyItemQuantity(req.params.id, req.body.quantity)
+        .then(() => {
+            return res.jsonp({
+                status: 200
+            })
+        }, (err) => {
+            return res.jsonp({
+                status: 202,
+                err: "增加失败"
+            })
+        })
+})
+
 export default router

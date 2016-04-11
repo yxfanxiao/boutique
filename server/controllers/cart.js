@@ -31,3 +31,7 @@ export function getCart(name, cb) {
 export function deleteCart(id) {
     return Cart.remove({_id: id})
 }
+
+export function modifyItemQuantity(id, quantity) {
+    return Cart.update({_id: id}, { $set: { quantity: quantity }})
+}

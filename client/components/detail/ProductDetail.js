@@ -79,6 +79,16 @@ export default class ProductDetail extends Component {
 
     }
 
+    handlerDecrease() {
+        const { detail,dispatch } = this.props
+        dispatch(actions.decreaseQuantity())
+    }
+
+    handlerIncrease() {
+        const { detail,dispatch } = this.props
+        dispatch(actions.increaseQuantity())
+    }
+
     _thumb_onSelected(e) {
         const { products, detail, dispatch, spuId } = this.props,
             { product } = products        
@@ -127,10 +137,10 @@ export default class ProductDetail extends Component {
                                 para0 && para1 && product.skuMap[`${para0};${para1}`].retailPrice
                             }
                             {
-                                para0 && !para1 && product.skuMap[para0].retailPrice
+                                para0 && !para1 && product.skuMap[para0] && product.skuMap[para0].retailPrice
                             }
                             {
-                                !para0 && para1 && product.skuMap[para1].retailPrice
+                                !para0 && para1 && product.skuMap[para1] && product.skuMap[para1].retailPrice
                             }
                             </div>
                         </div>
@@ -180,7 +190,7 @@ export default class ProductDetail extends Component {
                         </div>
                         <div className="detail-quantity">
                             <div className="name">数量</div>
-                            <Count detail={detail} dispatch={dispatch}/>
+                            <Count quantity={detail.quantity} handlerDecrease={this.handlerDecrease} handlerIncrease={this.handlerIncrease} dispatch={dispatch} />
                         </div>
                         <div className="detail-purchase">
                             <div className="purchase-detail" onClick={this.purchaseRightNow.bind(this)}>立即购买</div>
