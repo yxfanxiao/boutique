@@ -62,6 +62,7 @@ export default class Cart extends Component {
                                                     cart.cart.length > 0 && cart.cart
                                                         .map(item => item.quantity * item.retailPrice)
                                                         .reduce((prev, curr) => prev + curr)
+                                                    || 0
                                                 }
                                                 </span>
                                             </div>

@@ -18,7 +18,7 @@ body.modal-open {
 
     > .dialog {
         width: 300px;
-        min-height: 150px;
+        min-height: 100px;
         box-shadow: 0 0 80px 0 rgba(0,0,0,.4);
         background-color: #fff;
         position: absolute;
@@ -89,12 +89,12 @@ body.modal-open {
 
         &.error {
             color: red;
-            height: 40px;
+            height: 50px;
             margin-top: 10px;
             margin-bottom: -20px;
 
             > .error-msg {
-                line-height: 40px;
+                line-height: 50px;
             }
 
             > i {
@@ -106,6 +106,11 @@ body.modal-open {
         > .title {
             padding-right: 10px;
         }
+    }
+
+    a {
+        display: flex;
+        text-decoration: none;
     }
 
      button {

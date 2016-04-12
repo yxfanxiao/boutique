@@ -59,9 +59,7 @@ router.put("/:id", (req, res, next) => {
 router.post("/pay", (req, res, next) => {
     const { user, carts, balance } = req.body 
     Order.newOrder(user, carts)
-        .then(Cart.boughtCart(carts), (a, b) => {
-            console.log(a,b )
-        })
+        .then(Cart.boughtCart(carts))
         .then(User.updateAccount(user, balance))
         .then(() => {
             return res.jsonp({
