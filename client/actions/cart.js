@@ -1,4 +1,6 @@
 import * as types from "../constants"
+import { openModal } from "./modal"
+import { updateAccount } from "./user"
 
 function addToCart(info) {
     return {
@@ -7,7 +9,7 @@ function addToCart(info) {
     }
 }
 
-function getCart(cart) {
+export function getCart(cart) {
     return {
         type: types.GET_CART,
         cart
@@ -121,3 +123,35 @@ function decreaseItemQuantity(item) {
     }
 }
 
+export function fetchPay(user, cart) {
+    return (dispatch, getState) => {
+
+        const total = cart.map(item => item.quantity * item.retailPrice)
+            .reduce((prev, curr) => prev + curr)
+        const balance = user.account - total
+        fetch(`/cart/pay`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                user: user.name,
+                carts: cart.map(c => c._id),
+                balance: balance
+            })
+        }).then(res => res.json())
+          .then(data => {
+              if (data.status === 200) {
+
+                  dispatch(openModal("msg", "支付消息", "支付成功！"))
+                  dispatch(updateAccount({
+                      ...user,
+                      account: balance
+                  }))
+                  dispatch(getCart([]))
+              } else {
+                  alert("支付失败！")
+              }
+          })
+    }
+}

@@ -32,26 +32,58 @@
             }
         }
 
-        > div {
+
+        > .info {
             display: flex;
-            margin: 5px 0;
-            padding-left: 40px;
-            > span:nth-child(1) {
-                flex: 0 1 80px;
+            flex-flow: row nowrap;
+            padding-top: 10px;
+
+            > .left {
+                flex: 5;
+                > div {
+                    display: flex;
+                    margin: 5px 0;
+                    padding-left: 40px;
+                    > span:nth-child(1) {
+                        flex: 0 1 80px;
+                    }
+                }
+            }
+            > div:nth-child(2) {
+                border-left: 1px solid #ddd;
+            }
+            > .right {
+                flex: 3;
+                padding-left: 80px;
+                display: flex;
+
+                > .new-address {
+                    background: #f5f5f5;
+                    border:1px solid #ccc;
+                    padding: 5px 10px;
+                    color: #333;
+                    cursor: pointer;
+                    align-self: center;
+
+                    &:hover {
+                        background: #fff;
+
+                    }
+                }
             }
         }
 
-        > .person {
+        // > .person {
             
-        }
+        // }
 
-        > .tel {
+        // > .tel {
 
-        }
+        // }
 
-        > .address {
+        // > .address {
 
-        }
+        // }
     }
 
 }

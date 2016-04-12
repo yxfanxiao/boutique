@@ -7,7 +7,7 @@ import { Provider } from "react-redux"
 import store from "./store/configureStore"
 import reducers from "./reducers"
 import * as actions from "./actions"
-import { App, IndexContainer, ListContainer, ProductContainer, CartContainer, OrderContainer } from "./containers"
+import { App, IndexContainer, ListContainer, ProductContainer, CartContainer, OrderContainer, OrderListContainer } from "./containers"
 
 
 
@@ -31,6 +31,7 @@ render(
                     <Route path="product/:spuId" component={ProductContainer}/>
                     <Route path="my-cart" component={CartContainer}/>
                     <Route path="order" component={OrderContainer}/>
+                    <Route path="order/list" component={OrderListContainer}/>
                 </Route>
             </Route>
         </Router>

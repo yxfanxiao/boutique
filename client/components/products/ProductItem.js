@@ -16,7 +16,7 @@ export default class ProductItem extends Component {
                 </div>
                 <div className="product-introduction">
                     <Link to={`/product/${product.spuId}`}>{product.name}</Link>
-                    <p className="price">￥{product.skuList[0].retailPrice}</p>
+                    <p className="price">{product.skuList[0].retailPrice}</p>
                     <hr />
                     <p className="desc">{product.desc}</p>
                 </div>

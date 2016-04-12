@@ -21,3 +21,16 @@ export function reCharge(name, num, cb) {
         .update({ $inc: { account: num }})
         .exec(cb)
 }
+
+export function newAddress(name, contact, cb) {
+    return User.update({ name: name }, { $set: { contact: contact }}, cb)
+}
+
+
+export function updateAccount(name, balance) {
+    return User.where({ name: name })
+        .update({ account: balance })
+        .exec()
+}
+
+

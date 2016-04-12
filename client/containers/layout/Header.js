@@ -43,7 +43,7 @@ class Header extends Component {
                                     <ul>
                                         <li className="" onClick={this.reCharge.bind(this)}>充值</li>
                                         <li className="">余额￥{user.signUp.account || 0}</li>
-                                        <li className=""><Link to="/order"  className="">我的订单</Link></li>
+                                        <li className=""><Link to="/order/list"  className="">我的订单</Link></li>
                                         <li className="" onClick={this.logOut.bind(this)}>注销</li>
                                     </ul>
                                   </div>

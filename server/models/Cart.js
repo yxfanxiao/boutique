@@ -10,7 +10,8 @@ const CartSchema = new Schema({
     pic: { type: String },
     para: { type: Array },
     quantity: { type: String },
-    retailPrice: { type: Number }
+    retailPrice: { type: Number },
+    pay: { type: Boolean, default: false },
 })
 
 CartSchema.index({ create_at: -1 })

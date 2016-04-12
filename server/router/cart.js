@@ -1,6 +1,6 @@
 import { Router } from "express"
 import app from "../app"
-import { Cart } from "../controllers"
+import { Cart, Order, User } from "../controllers"
 
 const router = Router()
 
@@ -51,6 +51,25 @@ router.put("/:id", (req, res, next) => {
             return res.jsonp({
                 status: 202,
                 err: "增加失败"
+            })
+        })
+})
+
+
+router.post("/pay", (req, res, next) => {
+    const { user, carts, balance } = req.body 
+    Order.newOrder(user, carts)
+        .then(Cart.boughtCart(carts), (a, b) => {
+            console.log(a,b )
+        })
+        .then(User.updateAccount(user, balance))
+        .then(() => {
+            return res.jsonp({
+                status: 200
+            })
+        }, () => {
+            return res.jsonp({
+                status: 202
             })
         })
 })

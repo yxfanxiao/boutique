@@ -143,7 +143,10 @@
                     }
                 }
             }
-            > .btn {
+            a {
+                text-decoration: none;
+            }
+            .btn {
                 color: white;
                 width: 150px; 
                 font-size: 20px;
@@ -155,3 +158,11 @@
         }
     }
 }
+
+.price {              
+    font-weight: 700;
+    color: #ab2b2b;
+    &:before {
+        content: "￥";
+    }
+}   

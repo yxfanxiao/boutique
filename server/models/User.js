@@ -5,6 +5,7 @@ const UserSchema = new Schema({
     name: { type: String },
     pwd: { type: String },
     tel: { type: String },
+    contact: { type: Object },
     account: { type: Number, default: 0 },
 })
 

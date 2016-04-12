@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from "react"
 import CartItem from "./CartItem"
+import { Link } from "react-router"
 import * as actions from "../../actions"
 
 export default class Cart extends Component {
@@ -66,7 +67,7 @@ export default class Cart extends Component {
                                             </div>
                                             {
                                                !pay
-                                                    ? <div className="btn purchase" onClick={this.purchase.bind(this)}>下单</div>
+                                                    ? <Link to="/order"><div className="btn purchase" onClick={this.purchase.bind(this)}>下单</div></Link>
                                                     : <div className="btn pay" onClick={this.pay.bind(this)}>付款</div>
 
                                             }

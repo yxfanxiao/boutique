@@ -130,7 +130,7 @@ export default class ProductDetail extends Component {
                             <div className="name">{product.name}</div>
                             <div className="desc">{product.desc}</div>
                         </div> 
-                        <div className="price">
+                        <div className="detail-price">
                             <div className="name">售价</div>
                             <div className="desc">
                             {

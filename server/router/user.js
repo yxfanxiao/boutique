@@ -67,4 +67,24 @@ router.post("/reCharge", (req, res, next) => {
 })
 
 
+router.post("/address", (req, res, next) => {
+    const { name, info } = req.body
+
+    User.newAddress(name, info, () => {
+         User.findUserByName(name, (err, user) => {
+             if (err) {
+                return res.jsonp({
+                    status: 202,
+                    err: "地址建立失败"
+                })
+             }
+            return res.jsonp({
+                status: 200,
+                user: user
+            })
+        })
+    })        
+})
+
+
 export default router

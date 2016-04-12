@@ -6,6 +6,7 @@ import * as actions from "../../actions"
 import SignUp from "./SignUp"
 import LogIn from "./LogIn"
 import Pay from "./Pay"
+import CreateNewAddress from "./CreateNewAddress"
 
 class Modal extends Component {
 
@@ -50,6 +51,12 @@ class Modal extends Component {
                     }
                     {
                         modal.dialog === "pay" && <Pay cart={cart} user={user} pay={pay} dispatch={dispatch} />
+                    }
+                    {
+                        modal.dialog === "create-new-address" && <CreateNewAddress cart={cart} user={user} pay={pay} dispatch={dispatch} />
+                    }
+                    {
+                        modal.dialog === "msg" && <div className="msg">{modal.msg}</div>
                     }
                 </div>
             </div>

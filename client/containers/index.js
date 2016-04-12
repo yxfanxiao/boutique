@@ -4,6 +4,7 @@ import ListContainer from "./list/ListContainer"
 import ProductContainer from "./product/ProductContainer"
 import CartContainer from "./cart/CartContainer"
 import OrderContainer from "./order/OrderContainer"
+import OrderListContainer from "./order/OrderListContainer"
 
 export default {
     App,
@@ -12,4 +13,5 @@ export default {
     ProductContainer,
     CartContainer,
     OrderContainer,
+    OrderListContainer,
 }

@@ -36,6 +36,10 @@ function user(state = {
                 login: false,
                 signUp: {}
             })
+        case types.USER_UPDATE:
+            return Object.assign({}, state, {
+                signUp: action.user
+            })
         default:
             return state
     }

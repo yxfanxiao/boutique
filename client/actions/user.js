@@ -97,3 +97,29 @@ export function logOut() {
         type: types.LOG_OUT     
     }
 }
+
+export function postAddress(name, info) {
+    return (dispatch, getState) => {
+        fetch("/user/address", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({name, info})
+        }).then(res => res.json())
+          .then(data => {
+              if (data.status === 200) {
+                  dispatch(updateUser(data.user))
+                  dispatch(closeModal())
+              }
+          })
+    }
+}
+
+function updateUser(user) {
+    return {
+        type: types.USER_UPDATE,
+        user
+    }
+}
+

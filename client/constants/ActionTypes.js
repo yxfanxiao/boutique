@@ -33,10 +33,12 @@ const Actions = [
     "DELETE_ITEM",
     "ADD_ITEM_QUANTITY",
     "DECREASE_ITEM_QUANTITY",
+    "PAY",
 
     // modal
     "MODAL_CLOSE",
     "MODAL_OPEN",
+    "MODAL_MSG",
 
     // user
     "SIGN_UP",
@@ -45,6 +47,7 @@ const Actions = [
     "USER_VALIDATE_ERR",
     "UPDATE_ACCOUNT",
     "LOG_OUT",
+    "USER_UPDATE",
 ]
 
 
