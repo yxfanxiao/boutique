@@ -8,7 +8,7 @@ class OrderContainer extends Component {
 
     createNewAddress() {
         const { dispatch } = this.props 
-        dispatch(actions.openModal("create-new-address", "新建收货地址"))
+        dispatch(actions.openModal("create-new-address", "编辑收货地址"))
     }
 
     render() {

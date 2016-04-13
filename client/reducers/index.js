@@ -6,6 +6,7 @@ import detail from "./detail"
 import modal from "./modal"
 import user from "./user"
 import cart from "./cart"
+import order from "./order"
 
 
 const reducers = combineReducers({
@@ -16,6 +17,7 @@ const reducers = combineReducers({
     modal,
     user,
     cart,
+    order,
 })
 
 export default reducers

@@ -2,6 +2,7 @@ import "./style"
 
 import React, { Component, PropTypes } from "react"
 import Header from "./layout/Header"
+import Footer from "./layout/Footer"
 import { connect } from "react-redux"
 import Modal from "./modal/Modal"
 
@@ -37,6 +38,7 @@ class App extends Component {
                 {
                     this.props.modal.status === "open" && <Modal />
                 }
+                <Footer />
             </div>
         )
     }

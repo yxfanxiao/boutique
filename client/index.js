@@ -17,7 +17,6 @@ store.dispatch(actions.fetchCarousel())
 store.dispatch(actions.fetchProductList())
 
 
-
 render(
     <Provider store={store}>
         <Router history={browserHistory}>
@@ -31,7 +30,7 @@ render(
                     <Route path="product/:spuId" component={ProductContainer}/>
                     <Route path="my-cart" component={CartContainer}/>
                     <Route path="order" component={OrderContainer}/>
-                    <Route path="order/list" component={OrderListContainer}/>
+                    <Route path="my-order/list" component={OrderListContainer}/>
                 </Route>
             </Route>
         </Router>

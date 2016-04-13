@@ -136,6 +136,7 @@ export function fetchPay(user, cart) {
             },
             body: JSON.stringify({
                 user: user.name,
+                contact: user.contact,
                 carts: cart.map(c => c._id),
                 balance: balance
             })

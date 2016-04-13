@@ -57,8 +57,8 @@ router.put("/:id", (req, res, next) => {
 
 
 router.post("/pay", (req, res, next) => {
-    const { user, carts, balance } = req.body 
-    Order.newOrder(user, carts)
+    const { user, carts, contact, balance } = req.body 
+    Order.newOrder(user, carts, contact)
         .then(Cart.boughtCart(carts))
         .then(User.updateAccount(user, balance))
         .then(() => {

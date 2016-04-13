@@ -7,6 +7,7 @@ import router from "./router"
 import api from "./router/api"
 import user from "./router/user"
 import cart from "./router/cart"
+import order from "./router/order"
 import path from "path"
 import favicon from "serve-favicon"
 import config from "../config"
@@ -62,6 +63,7 @@ if (app.get("dev")) {
 app.use("/v1", api)
 app.use("/user", user)
 app.use("/cart", cart)
+app.use("/order", order)
 app.use("/", router)
 
 export default app

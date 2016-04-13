@@ -48,3 +48,7 @@ export async function boughtCart(carts, cb) {
 async function updatePayState(id) {
     return Cart.update({ _id: id }, { pay: true })
 }
+
+export async function findCartById(id) {
+    return Cart.findById(id)
+}

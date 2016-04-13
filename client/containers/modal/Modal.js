@@ -25,7 +25,7 @@ class Modal extends Component {
         document.querySelector(".dialog").className = "dialog close";
         setTimeout(() => {
             dispatch(actions.closeModal())
-        }, 1000)
+        }, 600)
     }
 
     render() {

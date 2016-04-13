@@ -4,6 +4,7 @@ import Nav from "./nav"
 import ProductDetail from "./detail"
 import Count from "./count"
 import Cart from "./cart"
+import OrderList from "./order"
 
 export default {
     ProductsList,
@@ -12,4 +13,5 @@ export default {
     ProductDetail,
     Count,
     Cart,
+    OrderList,
 }

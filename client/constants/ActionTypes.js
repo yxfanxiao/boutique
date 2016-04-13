@@ -48,6 +48,9 @@ const Actions = [
     "UPDATE_ACCOUNT",
     "LOG_OUT",
     "USER_UPDATE",
+
+    // order
+    "ORDER_RECEIVE",
 ]
 
 
