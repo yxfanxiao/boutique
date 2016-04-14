@@ -29,7 +29,7 @@ export default class Pay extends Component {
                     ?   <div className="group error">
                             <span className="err-msg">账户余额不足，请充值！</span>
                         </div>
-                    :   <Link to="/order/list"><button className="pay" onClick={this.pay.bind(this)}>支付</button></Link>
+                    :   <Link to="/my-order/list"><button className="pay" onClick={this.pay.bind(this)}>支付</button></Link>
                 }
             </div>
         )
