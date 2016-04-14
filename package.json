@@ -8,8 +8,8 @@
   "description": "A boutique shop.",
   "scripts": {
     "crawl": "node ./server/crawl/index",
-    "start": "export NODE_ENV=production && webpack && node ./bin/www",
-    "dev": "node ./bin/www",
+    "build": "webpack && node ./bin/www",
+    "start": "node ./bin/www",
     "test": "to be added."
   },
   "repository": {
