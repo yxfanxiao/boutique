@@ -1,9 +1,9 @@
-import * as types from "../constants";
+import * as types from "../constants"
 
-function getCarouselUrls(products) {
+function getDisplayCarousel(carousels) {
     return {
         type: types.CAROUSEL_RECEIVE_PICS,
-        urls: products.map(product => product.url)
+        urls: carousels.map(carousel => carousel.src)
     }
 }
 
@@ -25,6 +25,6 @@ export function fetchCarousel() {
     return (dispatch, getState) => {
         fetch("/v1/carousel")
             .then(res => res.json())
-            .then(products => dispatch(getCarouselUrls(products)))
+            .then(carousels => dispatch(getDisplayCarousel(carousels)))
     }
 }

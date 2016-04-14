@@ -29,23 +29,55 @@ function crawlGroup(categoryId) {
                 throw new Error("The lovely crawler crashed!")
             }
             const $ = cheerio.load(body)
-            const subCategoryIds = [] 
+            const subCategoryIds = [] ,
+                categorySrc = $(".w-cateBanner").css("background-image"),
+                categoryDesc = $(".w-cateBanner h2").text()
+
+            const items = []
             $(".m-items").each((i, element) => {
-                const $e = $(element)
-                const categoryId = $e.attr("id"),
-                    title = $e.find(".name.f-left").text(),
-                    desc = $e.find(".hd .desc").text()
-                subCategoryIds.push(categoryId)
-                const category = new Category()
-                Object.assign(category, {
-                    categoryId,
-                    title,
-                    desc
-                })
-                category.save()
+                items.push(element)
             })
-            Category.update({ categoryId: categoryId }, { $set: { subCategoryId: subCategoryIds }})    
-            resolve()
+            runNextTask(() => {
+                Category.update(
+                    { categoryId: categoryId }, 
+                    {
+                        $set: { 
+                            subCategoryId: subCategoryIds,
+                            src: categorySrc,
+                            desc: categoryDesc
+                        }
+                    }, resolve)    
+            })
+            function runNextTask(cb) {
+                const element = items.pop()
+                if (element) {
+                    crawlNextCategory(element).then(() => {
+                        runNextTask(cb)
+                    })
+                } else {
+                    if (typeof(cb) === "function") {
+                        cb()
+                    }
+                }
+            }
+            function crawlNextCategory(element) {
+                return new Promise((resolve, reject) => {
+                    const $e = $(element)
+                    const categoryId = $e.attr("id"),
+                        title = $e.find(".name.f-left").text(),
+                        desc = $e.find(".hd .desc").text(),
+                        icon = $e.find(".icon").attr("src")
+                    subCategoryIds.push(categoryId)
+                    const category = new Category()
+                    Object.assign(category, {
+                        categoryId,
+                        title,
+                        desc,
+                        icon
+                    })
+                    category.save(resolve)
+                })
+            }
         })
     })    
 }

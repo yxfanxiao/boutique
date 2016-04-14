@@ -1,9 +1,9 @@
-import * as types from "../constants";
+import * as types from "../constants"
 
 function carousel(state = {
     currentIndex: 0,
     hasReceived: false,
-    interval: 5000,
+    interval: 4000,
     pics: []
 }, action) {
     switch (action.type) {
@@ -21,8 +21,8 @@ function carousel(state = {
                 currentIndex: action.currentIndex
             })
         default:
-            return state;
+            return state
     }
 }
 
-export default carousel;
+export default carousel

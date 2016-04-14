@@ -22,8 +22,8 @@ module.exports = {
     },
     output: {
         // webpack will compile static assets here
-        path: path.join(__dirname, "./server/public/assets/"),
-        publicPath: "/assets/",
+        path: path.join(__dirname, "./server/public/assets/javascripts/"),
+        publicPath: "/assets/javascripts/",
         filename: devMode 
             ? "[name].bundle.js"
             : "[name].bundle-[hash].js",

@@ -5,7 +5,7 @@ A boutique shop
 ### Prerequisites
 ``` js
 $ npm install
-$ node run crawl
+$ npm run crawl
 ```
 
 ### Debug

@@ -1,0 +1,133 @@
+body.modal-open {
+    overflow: hidden;
+}
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(204, 204, 204, 0.7);
+    overflow: hidden;
+    display: none;
+
+    &.open {
+        display: block;
+    }
+
+    > .dialog {
+        min-height: 100px;
+        width: 300px;
+        box-shadow: 0 0 80px 0 rgba(0,0,0,.4);
+        background-color: #fff;
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        top: 150px;
+        right: 0;
+        padding: 20px;
+        transition: transform 0.3s ease;
+
+        &.close {
+            transform: rotateY(90deg);
+        }
+
+        > .dialog-header {
+            position: relative;
+            width: 100%;
+            height: 40px;   
+            margin-bottom: 20px;
+            color: #333;
+
+            > span {
+                font-size: 25px;
+                line-height: 40px;
+            }
+
+            > i {
+                position: absolute;
+                display: inline-block;
+                top:0;
+                right: 0px;
+                font-size: 30px;
+                height: 30px;
+                width: 30px;
+                line-height: 30px;
+                cursor: pointer;
+            }
+        }
+
+        > .msg {
+            line-height: 50px;
+            font-size: 30px;
+            color: red;
+        }
+    }
+}
+
+.modal .dialog .dialog-wrap {
+    display: flex;
+    flex-direction: column;
+    > .group {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        line-height: 50px;
+
+        > input {
+            flex: none;
+            width: 300px;
+            height: 50px;
+            line-height: 40px;
+            border: none;
+            color: #787878;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            outline: 0;
+        }
+
+        &.error {
+            color: red;
+            height: 50px;
+            margin-top: 10px;
+            margin-bottom: -20px;
+
+            > .error-msg {
+                line-height: 50px;
+            }
+
+            > i {
+                line-height: 40px;
+                font-size: 22px;
+                margin-right: 10px;
+            }
+        }
+        > .title {
+            padding-right: 10px;
+        }
+    }
+
+    a {
+        display: flex;
+        text-decoration: none;
+    }
+
+     button {
+        width: 150px;
+        margin: 0 auto;
+        margin-top: 30px;
+        border: none;
+        background-color: #7cbdf5;
+        color: white;
+        font-size: 22px;
+        padding: 5px;
+        cursor: pointer;
+        outline: 0;
+    }
+}
+
+.modal .dialog .sign-up {
+
+}
+

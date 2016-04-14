@@ -1,14 +1,38 @@
-import { PRODUCTS_RECEIVE_ALL } from "../constants";
+import { PRODUCTS_RECEIVE_PRODUCT_LIST, PRODUCTS_LIST, PRODUCT_DETAIL, PRODUCT_RETURN_TO_INDEX, PRODUCT_RELOAD_NAV } from "../constants"
 
-function products(state = [], action) {
+function products(state = {
+    productList: {},
+    currentList: "",
+    list: {},
+    currentProduct: "",
+    product: {}
+}, action) {
     switch (action.type) {
-        case PRODUCTS_RECEIVE_ALL:
-            return [
-                ...action.products
-            ]
+        case PRODUCTS_RECEIVE_PRODUCT_LIST:
+            return Object.assign({}, state, {
+                productList: action.productList
+            })
+        case PRODUCTS_LIST:
+            return Object.assign({}, state, {
+                currentList: action.currentList || "",
+                list: action.list
+            })
+        case PRODUCT_DETAIL:
+            return Object.assign({}, state, {
+                currentProduct: action.currentProduct,
+                product: action.product
+            })
+        case PRODUCT_RETURN_TO_INDEX:
+            return Object.assign({}, state, {
+                currentList: ""
+            })
+        case PRODUCT_RELOAD_NAV:
+            return Object.assign({}, state, {
+                currentList: action.categoryId
+            })
         default:
-            return state;
+            return state
     }
 }
 
-export default products;
+export default products

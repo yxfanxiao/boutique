@@ -1,9 +1,11 @@
 import mongoose from "mongoose"
 import config from "../../config"
-// import User from "./User"
 import Product from "./Product"
 import Carousel from "./Carousel"
 import Category from "./Category"
+import User from "./User"
+import Cart from "./Cart"
+import Order from "./Order"
 
 
 
@@ -19,7 +21,10 @@ db.once("open", () => {
 export default combineSchemas({
     Product,
     Carousel,
-    Category
+    Category,
+    User,
+    Cart,
+    Order,
 })
 
 

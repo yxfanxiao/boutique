@@ -20,7 +20,7 @@ function crawlCarousel() {
                 const carousel = new Carousel()
                 Object.assign(carousel, {
                     src: $($(c).find(".js-img")).attr("src"),
-                    spuId: id[0]
+                    spuId: id[0].replace(/id=/, "")
                 })
                 carousel.save()
             })

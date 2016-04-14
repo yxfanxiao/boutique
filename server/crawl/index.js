@@ -18,4 +18,3 @@ crawlCarousel()
 	.then(() => {
 		console.log("Please press Ctrl+C to exit. Then, npm start.");	    
 	})
-

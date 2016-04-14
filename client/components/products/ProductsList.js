@@ -1,19 +1,21 @@
-import React, { Component, PropTypes } from "react";
-import ProductItem from "./ProductItem";
+import React, { Component, PropTypes } from "react"
+import ProductItem from "./ProductItem"
 
 export default class ProductsList extends Component {
     render() {
-        const { products } = this.props;
+        const { productList } = this.props
         return (
-            <ul className="products-list">
+            <div>
+                <ul className="products-list">
                 {
-                    products.map(product => {
+                    productList.map(product => {
                         return (
-                            <ProductItem product={product} key={product._id} />       
-                        );
+                            <ProductItem product={product} key={product.spuId} />       
+                        )
                     })
                 }
-            </ul>
-        );
+                </ul>
+            </div>
+        )
     }
 }

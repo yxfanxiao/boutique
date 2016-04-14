@@ -1,9 +1,17 @@
 import App from "./App"
-import IndexContainer from "./index/indexContainer"
+import IndexContainer from "./index/IndexContainer"
 import ListContainer from "./list/ListContainer"
+import ProductContainer from "./product/ProductContainer"
+import CartContainer from "./cart/CartContainer"
+import OrderContainer from "./order/OrderContainer"
+import OrderListContainer from "./order/OrderListContainer"
 
 export default {
     App,
     IndexContainer,
-    ListContainer
+    ListContainer,
+    ProductContainer,
+    CartContainer,
+    OrderContainer,
+    OrderListContainer,
 }
