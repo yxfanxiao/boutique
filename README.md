@@ -10,12 +10,12 @@ $ npm run crawl
 
 ### Debug
 ```
-$ npm start
+$ npm run dev
 ```
 
 ### Production
 ```
-$ npm run build --production
+$ npm start
 ```
 
 ### Test
