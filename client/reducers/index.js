@@ -7,6 +7,7 @@ import modal from "./modal"
 import user from "./user"
 import cart from "./cart"
 import order from "./order"
+import admin from "./admin"
 
 
 const reducers = combineReducers({
@@ -18,6 +19,7 @@ const reducers = combineReducers({
     user,
     cart,
     order,
+    admin,
 })
 
 export default reducers

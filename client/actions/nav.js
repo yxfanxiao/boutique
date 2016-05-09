@@ -3,7 +3,8 @@ import * as types from "../constants"
 function getNav(nav) {
     return {
         type: types.NAV_RECEIVE,
-        nav: nav
+        nav: nav.nav,
+        subCate: nav.subCate,
     }
 }
 

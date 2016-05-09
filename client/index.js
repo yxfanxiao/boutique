@@ -7,7 +7,12 @@ import { Provider } from "react-redux"
 import store from "./store/configureStore"
 import reducers from "./reducers"
 import * as actions from "./actions"
-import { App, IndexContainer, ListContainer, ProductContainer, CartContainer, OrderContainer, OrderListContainer } from "./containers"
+import { 
+    App, IndexContainer, ListContainer, 
+    ProductContainer, CartContainer, OrderContainer, 
+    OrderListContainer, AdminContainer, 
+    AddContainer, DeleteContainer,
+} from "./containers"
 
 
 
@@ -31,6 +36,11 @@ render(
                     <Route path="my-cart" component={CartContainer}/>
                     <Route path="order" component={OrderContainer}/>
                     <Route path="my-order/list" component={OrderListContainer}/>
+                    <Route path="admin" component={AdminContainer}>
+                        <IndexRoute component={AddContainer} />
+                        <Route path="/admin/delete" component={DeleteContainer} />
+                        <Route path="/admin/add" component={AddContainer} />
+                    </Route>
                 </Route>
             </Route>
         </Router>

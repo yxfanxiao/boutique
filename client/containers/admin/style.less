@@ -1,0 +1,119 @@
+.admin-container {
+    width: 1090px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 50px;
+    flex-flow: row nowrap;
+
+    > .warning {
+        font-size: 40px;
+        font-weight: 700;
+        color: red;
+    }
+
+    > .admin-operation {
+        flex: 0 0 200px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        a {
+            width: 100%;
+            text-decoration: none;
+            color: #333;
+            margin: 10px;
+            text-align: center;
+            border-left: 3px solid transparent;
+        }
+
+        span {
+            font-size: 20px;
+
+        }
+        .add {
+
+        }
+
+        .delete {
+
+        }
+    }
+
+    > .child-container {
+        flex: 1 1 auto;
+        margin: 10px 20px;
+        margin-bottom: 80px;
+        border: 1px solid #E9E9E9;
+
+        > .title {
+            font-size: 30px;
+            flex: 0 0 200px;
+            color: #333;
+        }
+
+        > .admin-form {
+            flex: 1 0 auto;
+            padding: 40px;
+            padding-left: 80px;
+            font-size: 15px;
+            min-height: 400px; 
+
+
+            > .group {
+                display: flex;
+                min-height: 30px;
+                margin-top: 24px;
+
+                > .label {
+                    flex: 0 0 200px;
+                }
+
+                > #select-2-nav {
+                    margin-left: 20px;
+                }
+
+                > .wrap {
+                    width: 700px;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    border: 1px solid #e9e9e9;
+                    margin-top: 20px;
+
+                    > .products {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 20px;
+                        color: #333;
+
+                        > img {
+                            width: 100px;
+                            height: 100px;
+                            flex: 0 0 auto;
+                        }
+
+                        > .title {
+                            flex: 0 0 200px;
+                            margin-left: 30px;
+                        }
+                        > .desc {
+                            flex: 0 0 270px;
+                        }
+                        > .delete {
+                            flex: 0 0 50px;
+                            color: red;
+                            cursor: pointer;
+                        }
+                    }
+
+                }
+            }
+
+            .submit {
+                width: 100px;
+                margin-top: 20px;
+            }
+        }
+    }
+}

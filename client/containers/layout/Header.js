@@ -41,10 +41,17 @@ class Header extends Component {
                                 ? <div className="user">
                                     <span className="user-name">{user.signUp.name}<i className="iconfont icon-0037xiangxia" /></span>
                                     <ul>
-                                        <li className="" onClick={this.reCharge.bind(this)}>充值</li>
+                                        <li className="" onClick={this.reCharge.bind(this)}>充值￥100</li>
                                         <li className="">余额￥{user.signUp.account || 0}</li>
                                         <li className=""><Link to="/my-order/list"  className="">我的订单</Link></li>
                                         <li className="" onClick={this.logOut.bind(this)}>注销</li>
+                                        {
+                                            user.signUp.name === "admin@qq.com" &&
+                                            <li>
+                                                <Link to="/admin"  className="">后台管理</Link>
+                                            </li>
+
+                                        }
                                     </ul>
                                   </div>
                                 : <div className="user-log-sign">
