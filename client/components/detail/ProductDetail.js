@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from "react"
 import Count from "../count"
 import * as actions from "../../actions"
-import { Link, IndexLink } from "react-router"
 
 export default class ProductDetail extends Component {
     componentWillMount() {
@@ -77,43 +76,6 @@ export default class ProductDetail extends Component {
     }
 
     purchaseRightNow() {
-        const { detail, user, cart, products, dispatch } = this.props 
-        if (!user.login) {
-            dispatch(actions.openModal("log-in", "登录"))
-            return
-        }
-        const { selectedPara, quantity } = detail 
-        const { currentProduct } = products
-        const { name } = user.signUp
-
-        const paras = `${selectedPara}`.split(";")
-        const len = paras.length,
-            para = []
-        if (len === 1) {
-            products.product.skuSpecList[0].skuSpecValueList.forEach(p => {
-                if (p.id === +paras[0]) {
-                    para.push(p.value)
-                }
-            })
-        } else {
-            products.product.skuSpecList.forEach(s => {
-                s.skuSpecValueList.forEach(p => {
-                    if (p.id === +paras[0] || p.id === +paras[1]) {
-                        para.push(p.value)
-                    }
-                })
-            })
-        }
-        dispatch(actions.fetchAddToCart({
-            userName: name,
-            spuId: currentProduct,
-            skuId: selectedPara,
-            title: products.product.name,
-            pic: detail.thumbSrc,
-            para,
-            quantity,
-            retailPrice: products.product.skuMap[selectedPara].retailPrice
-        }))
 
     }
 
@@ -231,7 +193,7 @@ export default class ProductDetail extends Component {
                             <Count quantity={detail.quantity} handlerDecrease={this.handlerDecrease} handlerIncrease={this.handlerIncrease} dispatch={dispatch} />
                         </div>
                         <div className="detail-purchase">
-                            <Link to="/order"><div className="purchase-detail" onClick={this.purchaseRightNow.bind(this)}>立即购买</div></Link>
+                            <div className="purchase-detail" onClick={this.purchaseRightNow.bind(this)}>立即购买</div>
                             <div className="add-detail-to-cart" onClick={this.addToCart.bind(this)}><i className="iconfont icon-cart2"></i>加入购物车</div>
                         </div>
                     </div>
